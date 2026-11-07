@@ -1,0 +1,6 @@
+{
+  "name": "JILIT Holidays - Luxury European Escapes & UK Airport Transfers",
+  "description": "Curated premium European holiday escapes, hand-crafted festive city tours, and punctual UK airport transfers with ATOL & ABTA protection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

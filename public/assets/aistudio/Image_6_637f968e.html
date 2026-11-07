@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "status-warning-bg": "#FEFCBF",
+          "on-secondary-fixed": "#0f1c2c",
+          "surface-container-high": "#dee9ff",
+          "status-error": "#C53030",
+          "tertiary-container": "#473500",
+          "status-success": "#1E7E34",
+          "surface-card": "#FFFFFF",
+          "inverse-on-surface": "#ebf1ff",
+          "error-container": "#ffdad6",
+          "surface-dim": "#cfdaf1",
+          "outline": "#707978",
+          "on-secondary-fixed-variant": "#3a4859",
+          "on-error-container": "#93000a",
+          "secondary": "#525f71",
+          "surface-container-low": "#f0f3ff",
+          "tertiary": "#2d2000",
+          "surface-variant": "#d8e3f9",
+          "on-tertiary-container": "#c59b27",
+          "primary-fixed": "#beebe9",
+          "surface-canvas": "#FAFAFA",
+          "border-subtle": "#E2E8F0",
+          "surface-container": "#e7eeff",
+          "error": "#ba1a1a",
+          "inverse-surface": "#263142",
+          "on-tertiary-fixed": "#251a00",
+          "on-tertiary": "#ffffff",
+          "primary": "#002727",
+          "status-success-bg": "#EBF8EE",
+          "surface-container-highest": "#d8e3f9",
+          "inverse-primary": "#a2cfcd",
+          "secondary-fixed": "#d6e4f9",
+          "on-surface": "#111c2c",
+          "on-primary-fixed": "#00201f",
+          "primary-container": "#0f3e3d",
+          "on-background": "#111c2c",
+          "surface-bright": "#f9f9ff",
+          "surface-muted": "#F3F5F7",
+          "secondary-container": "#d3e1f6",
+          "accent-gold-hover": "#AC8419",
+          "on-primary-container": "#7da9a7",
+          "outline-variant": "#c0c8c7",
+          "background": "#f9f9ff",
+          "secondary-fixed-dim": "#bac8dc",
+          "border-strong": "#CBD5E1",
+          "status-error-bg": "#FFF5F5",
+          "on-surface-variant": "#404848",
+          "on-error": "#ffffff",
+          "surface-tint": "#3b6664",
+          "on-secondary-container": "#566475",
+          "primary-fixed-dim": "#a2cfcd",
+          "on-tertiary-fixed-variant": "#5a4300",
+          "surface-container-lowest": "#ffffff",
+          "tertiary-fixed": "#ffdf98",
+          "surface": "#f9f9ff",
+          "status-warning": "#B7791F",
+          "tertiary-fixed-dim": "#eec14b",
+          "on-primary": "#ffffff",
+          "accent-gold-subtle": "#FDF9EE",
+          "on-primary-fixed-variant": "#224d4c",
+          "on-secondary": "#ffffff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-3xl": "6rem",
+          "gutter": "1.5rem",
+          "gutter-mobile": "1rem",
+          "space-lg": "1.5rem",
+          "margin-mobile": "1.25rem",
+          "space-xl": "2.5rem",
+          "margin": "3rem",
+          "space-sm": "0.5rem",
+          "space-2xl": "4rem",
+          "space-md": "1rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "price-display": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Playfair Display"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "headline-lg": ["Playfair Display"],
+          "display": ["Playfair Display"],
+          "body-md": ["Plus Jakarta Sans"],
+          "headline-xl-mobile": ["Playfair Display"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"],
+          "headline-xl": ["Playfair Display"],
+          "display-mobile": ["Playfair Display"]
+        },
+        "fontSize": {
+          "price-display": ["28px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600"}],
+          "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+          "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700"}],
+          "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+          "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "display": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+          "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "headline-xl-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "headline-sm": ["18px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600"}],
+          "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+          "headline-md": ["22px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+          "display-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+        }
+      }
+    }
+  };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm" data-path="holidays" href="#"><img alt="JILIT Holidays Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X3FIs3tjapG5gkrx5XBiaSkO1qAJ-9ZgjGOxDmzWMfexN_j0k5S9EH0tLfLKIodbyWCAVPLv9KBx526rRk1derTa9wLm8vd8Jie9KL418IYcJnf-A9y-SyEzdWPdMBEXhWJ2q3IjmIekU264UtHeab5FLhQ20dkSTu0YzvtZdv3Si7JqLaApsDAUONlobebJd9kKI-Gg3RMEQ0dTotLbnN9XzzvMMvdsg5WqqTfKCtBbyQNhl8MoyEny0"/><span class="font-headline-sm text-headline-sm tracking-tight text-primary-container font-bold">JILIT Holidays</span></a></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary font-bold rounded-xl"><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="holidays" href="#">Holidays</a><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="airport-transfers" href="#">Airport Transfers</a><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="blog" href="#">Blog</a><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="my-account" href="#">My Account</a></nav><div class="flex items-center gap-space-md"><a class="hidden md:inline-flex items-center justify-center px-space-lg py-space-sm rounded-xl bg-on-tertiary-container hover:bg-accent-gold-hover text-on-tertiary font-label-lg text-label-lg shadow-[0_1px_3px_0_rgba(15,62,61,0.04)] transition-all" data-path="holidays" href="#">Explore Holidays</a><a class="flex items-center gap-space-xs" data-path="my-account" href="#"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></a></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<!-- Top Breadcrumbs & Editorial Discovery Header -->
+<section class="w-full bg-surface-container-low/70 py-space-xl">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md mb-space-md">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[15px]">home</span>
+          Home
+        </a>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-bold">Explore Holidays</span>
+</nav>
+<!-- Main Section Header -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="max-w-3xl space-y-space-xs">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+            Winter &amp; Spring 2025/26 Season
+          </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Explore Holidays</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            Handcrafted seasonal escapes and European city tours curated for discerning UK travellers.
+          </p>
+</div>
+<!-- Split Payment Assurance Pill -->
+<div class="flex items-center gap-3 bg-surface-container-lowest px-4 py-3 rounded-xl shadow-sm">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary">Flexible Booking Guarantee</span>
+<span class="block font-headline-sm text-headline-sm text-on-surface">Secure from £450 deposit today</span>
+</div>
+</div>
+</div>
+<!-- Quick Summary Stat Bar & Sort Controls -->
+<div class="mt-space-xl pt-space-md flex flex-wrap items-center justify-between gap-space-md">
+<!-- Result count & active chips -->
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface mr-2 font-bold">Showing 24 Packages</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
+            Christmas &amp; Winter
+            <button aria-label="Remove filter Christmas &amp; Winter" class="hover:text-error transition-colors flex items-center">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
+            Europe
+            <button aria-label="Remove filter Europe" class="hover:text-error transition-colors flex items-center">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
+            Under £1,500
+            <button aria-label="Remove filter Under 1500" class="hover:text-error transition-colors flex items-center">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</span>
+<button class="text-primary font-label-sm text-label-sm uppercase tracking-wider hover:underline ml-2">Clear All</button>
+</div>
+<!-- Sort Menu -->
+<div class="flex items-center gap-space-sm">
+<label class="font-label-md text-label-md text-on-surface-variant" for="sort-packages">Sort by:</label>
+<div class="relative inline-block">
+<select class="appearance-none bg-surface-container-lowest text-on-surface font-label-lg text-label-lg pl-3 pr-8 py-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer" id="sort-packages">
+<option selected="">Curated &amp; Recommended</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Duration: Shortest</option>
+<option>Duration: Longest</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Discovery Content: Filter Sidebar + Results Grid -->
+<section class="w-full py-space-xl">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col lg:flex-row gap-space-xl items-start">
+<!-- Filter Sidebar (320px Desktop) -->
+<aside class="w-full lg:w-80 shrink-0 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-lg">
+<!-- Sidebar Top -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Filters</h2>
+</div>
+<button class="text-on-surface-variant hover:text-error font-label-sm text-label-sm uppercase tracking-wider transition-colors" type="button">
+              Reset Filters
+            </button>
+</div>
+<!-- Destination Filter -->
+<div class="space-y-space-sm pt-space-xs">
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider">Destination</h3>
+<div class="relative">
+<input class="w-full bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm rounded-lg pl-9 pr-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Search country or city..." type="text"/>
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+</div>
+<div class="space-y-2 max-h-48 overflow-y-auto pr-1">
+<label class="flex items-center justify-between font-body-sm text-body-sm text-on-surface cursor-pointer select-none py-0.5 hover:text-primary">
+<span class="flex items-center gap-2.5">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>Czech Republic</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded-full">4</span>
+</label>
+<label class="flex items-center justify-between font-body-sm text-body-sm text-on-surface cursor-pointer select-none py-0.5 hover:text-primary">
+<span class="flex items-center gap-2.5">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>Switzerland</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded-full">6</span>
+</label>
+<label class="flex items-center justify-between font-body-sm text-body-sm text-on-surface cursor-pointer select-none py-0.5 hover:text-primary">
+<span class="flex items-center gap-2.5">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>Austria</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded-full">5</span>
+</label>
+<label class="flex items-center justify-between font-body-sm text-body-sm text-on-surface cursor-pointer select-none py-0.5 hover:text-primary">
+<span class="flex items-center gap-2.5">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>Hungary</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded-full">3</span>
+</label>
+<label class="flex items-center justify-between font-body-sm text-body-sm text-on-surface cursor-pointer select-none py-0.5 hover:text-primary">
+<span class="flex items-center gap-2.5">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>Norway &amp; Lapland</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded-full">4</span>
+</label>
+<label class="flex items-center justify-between font-body-sm text-body-sm text-on-surface cursor-pointer select-none py-0.5 hover:text-primary">
+<span class="flex items-center gap-2.5">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>Iceland</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded-full">2</span>
+</label>
+</div>
+</div>
+<!-- Travel Month & Departure Chips -->
+<div class="space-y-space-sm pt-space-xs">
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider">Departure Period</h3>
+<div class="grid grid-cols-2 gap-2">
+<button class="px-2.5 py-1.5 rounded-lg font-label-md text-label-md text-left transition-all bg-primary text-on-primary font-bold shadow-sm" type="button">
+                Nov 2025
+              </button>
+<button class="px-2.5 py-1.5 rounded-lg font-label-md text-label-md text-left transition-all bg-surface-container hover:bg-surface-container-high text-on-surface" type="button">
+                Dec 2025
+              </button>
+<button class="px-2.5 py-1.5 rounded-lg font-label-md text-label-md text-left transition-all bg-surface-container hover:bg-surface-container-high text-on-surface" type="button">
+                Jan 2026
+              </button>
+<button class="px-2.5 py-1.5 rounded-lg font-label-md text-label-md text-left transition-all bg-surface-container hover:bg-surface-container-high text-on-surface" type="button">
+                Feb 2026
+              </button>
+<button class="col-span-2 px-2.5 py-1.5 rounded-lg font-label-md text-label-md text-left transition-all bg-surface-container hover:bg-surface-container-high text-on-surface" type="button">
+                Spring 2026 (Mar - May)
+              </button>
+</div>
+</div>
+<!-- Duration Checkboxes -->
+<div class="space-y-space-sm pt-space-xs">
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider">Tour Duration</h3>
+<div class="space-y-2">
+<label class="flex items-center gap-2.5 font-body-sm text-body-sm text-on-surface cursor-pointer">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>2 - 3 Days (Weekend Break)</span>
+</label>
+<label class="flex items-center gap-2.5 font-body-sm text-body-sm text-on-surface cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>4 - 5 Days (Classic Tour)</span>
+</label>
+<label class="flex items-center gap-2.5 font-body-sm text-body-sm text-on-surface cursor-pointer">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>6 - 7 Days (Grand Explorer)</span>
+</label>
+<label class="flex items-center gap-2.5 font-body-sm text-body-sm text-on-surface cursor-pointer">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>8+ Days (Extended Journey)</span>
+</label>
+</div>
+</div>
+<!-- Category / Experience -->
+<div class="space-y-space-sm pt-space-xs">
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider">Experience Style</h3>
+<div class="space-y-2">
+<label class="flex items-center justify-between font-body-sm text-body-sm text-on-surface cursor-pointer hover:text-primary">
+<span class="flex items-center gap-2.5">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>Christmas Markets</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">park</span>
+</label>
+<label class="flex items-center justify-between font-body-sm text-body-sm text-on-surface cursor-pointer hover:text-primary">
+<span class="flex items-center gap-2.5">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>Alpine &amp; Snow</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-primary">downhill_skiing</span>
+</label>
+<label class="flex items-center justify-between font-body-sm text-body-sm text-on-surface cursor-pointer hover:text-primary">
+<span class="flex items-center gap-2.5">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>Cultural &amp; Heritage</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">museum</span>
+</label>
+<label class="flex items-center justify-between font-body-sm text-body-sm text-on-surface cursor-pointer hover:text-primary">
+<span class="flex items-center gap-2.5">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>Thermal Spas &amp; Lakes</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-primary">hot_tub</span>
+</label>
+<label class="flex items-center justify-between font-body-sm text-body-sm text-on-surface cursor-pointer hover:text-primary">
+<span class="flex items-center gap-2.5">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>Northern Lights</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">nightlight</span>
+</label>
+</div>
+</div>
+<!-- Price Range Slider -->
+<div class="space-y-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider">Price per Person</h3>
+<span class="font-label-sm text-label-sm text-primary font-bold">£400 - £2,500</span>
+</div>
+<!-- Range slider presentation -->
+<div class="relative pt-2 pb-1">
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 65%;"></div>
+</div>
+<div class="flex justify-between items-center text-[11px] text-outline mt-1 font-label-sm">
+<span>£400</span>
+<span>£1,500</span>
+<span>£2,500+</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="bg-surface-container-low px-3 py-1.5 rounded-lg">
+<span class="block text-[10px] text-outline font-label-sm uppercase">Min</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">£400</span>
+</div>
+<div class="bg-surface-container-low px-3 py-1.5 rounded-lg">
+<span class="block text-[10px] text-outline font-label-sm uppercase">Max</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">£1,500</span>
+</div>
+</div>
+<!-- Split Payment Notice Tile -->
+<div class="bg-surface-container p-3 rounded-xl flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary-container text-[18px] shrink-0 mt-0.5">verified</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+<strong class="text-on-surface">Split Deposit:</strong> All packages eligible for split deposits from £450 today. Balance 30 days prior.
+              </p>
+</div>
+</div>
+<!-- Inclusions & Star Rating -->
+<div class="space-y-space-sm pt-space-xs">
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider">Accommodations &amp; Standard</h3>
+<div class="space-y-2">
+<label class="flex items-center gap-2.5 font-body-sm text-body-sm text-on-surface cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>4★ &amp; 5★ Heritage Hotels</span>
+</label>
+<label class="flex items-center gap-2.5 font-body-sm text-body-sm text-on-surface cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>UK Airport Transfers Included</span>
+</label>
+<label class="flex items-center gap-2.5 font-body-sm text-body-sm text-on-surface cursor-pointer">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-[#00677d] cursor-pointer" type="checkbox"/>
+<span>Return Flights Included</span>
+</label>
+</div>
+</div>
+<!-- Apply Filters Button -->
+<div class="pt-space-sm">
+<button class="w-full bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-label-lg text-label-lg py-3 rounded-xl shadow-sm transition-colors text-center font-bold" type="button">
+              Apply Filters
+            </button>
+</div>
+</aside>
+<!-- Result Holiday Cards (3-column responsive grid on desktop) -->
+<main class="flex-1 w-full">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-lg">
+<!-- PACKAGE 1 (Featured Flagship) -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col group transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<!-- Visual Card Header -->
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Prague Old Town Square Christmas market illuminated at night with warm golden fairy lights, towering decorated Christmas tree, Gothic Church of Our Lady before Tyn spires in deep indigo winter twilight, bustling festive wooden stalls, British holidaymakers enjoying mulled wine, editorial travel photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6WqospWwSgExZUMweUwNKsQ82LssXNhAZz9KIttWBMfEbo63HqL4R9TPPYAKHbegENUf7PH_LKdUeDvsQhSeK4WsmvplKlxCmu9vkmPglN8Z1SYAr9NiVySlHeE1CcVpWtpP6s-OkFiNI7FGjn2iJtPYaWqn6B5SF81bmmu6MPIFKCTBTfbE8lnh6Wnu_UCNlaaHv-U8pf7pOWo7LUwlscV2Onkkrezqwvceum3yp8w4-00rAePiDWg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none"></div>
+<!-- Badges -->
+<div class="absolute top-3 left-3 flex flex-col gap-1.5 items-start">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wider shadow-sm font-bold">
+<span class="material-symbols-outlined text-[13px]">hotel_class</span>
+                    Featured Festive Special
+                  </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary font-label-sm text-label-sm drop-shadow">
+<span class="flex items-center gap-1 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 4 Days / 3 Nights
+                  </span>
+<span class="flex items-center gap-1 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">flight_takeoff</span> Flights &amp; Transfer
+                  </span>
+</div>
+</div>
+<!-- Content Body -->
+<div class="p-space-lg flex-1 flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm mb-1 uppercase tracking-wider">
+<span>Prague, Czech Republic</span>
+<span class="text-tertiary-container font-bold">Christmas Markets</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                    Prague Christmas Tour
+                  </h3>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    Enchanting Bohemian festive atmosphere with private Old Town market tour, VIP classical gala concert, and heritage hotel.
+                  </p>
+<!-- Key Inclusions List -->
+<div class="mt-space-sm pt-space-xs space-y-1.5 bg-surface-container-low/70 p-3 rounded-lg">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">verified</span>
+<span>4★ Heritage Old Town Hotel</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">directions_car</span>
+<span>UK &amp; Prague Airport Transfers</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">local_activity</span>
+<span>Old Town Walk &amp; Concert</span>
+</div>
+</div>
+</div>
+<!-- Price & CTA Block -->
+<div class="pt-space-sm flex items-end justify-between gap-2">
+<div>
+<span class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary">Total Package</span>
+<div class="font-price-display text-price-display text-on-surface">
+                      £700 <span class="font-body-sm text-body-sm text-secondary font-normal">pp</span>
+</div>
+<span class="block text-[11px] font-label-sm text-tertiary-container font-semibold mt-0.5">
+                      From £450 deposit today
+                    </span>
+</div>
+<a class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary-fixed-dim font-label-lg text-label-lg font-bold shadow-sm transition-all hover:shadow" href="#">
+                    View Details
+                  </a>
+</div>
+</div>
+</article>
+<!-- PACKAGE 2: Swiss Alpine Winter Wonderland -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col group transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Glacier Express red luxury train winding through deep white alpine snowdrifts across the Landwasser Viaduct in Switzerland, towering majestic snow-capped peaks against a sharp crisp azure winter sky, scenic pine trees dusted in white frost, pristine high-end luxury Swiss travel photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpleoyNK_alywSiBwf8Ha5ksOyypDGBDxAmdBA7bERDAclxWjyw3K1aZzNPe-Vq37u6q8tmKrMCBtn24xFC1eIgUl4l4s6EeRg331lyX_q1daTf5J9g-C_Zq_GE_Ctat67DpJawCWirw_AM-tgP6u_4DlfHMS8P7l7nZi9xacQlcGDYZSxOFGR6tSIEamGqWvNsqvHOV0Y5N_0a--eVQ-cZXF4L95UAzyzEhHUVZGHA9Qitcroky7Mmw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none"></div>
+<div class="absolute top-3 left-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm uppercase tracking-wider shadow-sm font-bold">
+<span class="material-symbols-outlined text-[13px] text-primary">ac_unit</span>
+                    Alpine Signature
+                  </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary font-label-sm text-label-sm drop-shadow">
+<span class="flex items-center gap-1 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 6 Days / 5 Nights
+                  </span>
+<span class="flex items-center gap-1 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">train</span> 1st Class Rail
+                  </span>
+</div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm mb-1 uppercase tracking-wider">
+<span>Zermatt &amp; Lucerne, Switzerland</span>
+<span class="text-primary font-bold">Alpine &amp; Snow</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                    Swiss Alpine Winter Wonderland
+                  </h3>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    Panoramic Glacier Express 1st class journey through snow-capped valleys, paired with 5-star mountain chalet stays.
+                  </p>
+<div class="mt-space-sm pt-space-xs space-y-1.5 bg-surface-container-low/70 p-3 rounded-lg">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">train</span>
+<span>Glacier Express 1st Class Rail</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">apartment</span>
+<span>5★ Luxury Chalet Stay</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">restaurant</span>
+<span>Daily Alpine Gourmet Breakfast</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-end justify-between gap-2">
+<div>
+<span class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary">From</span>
+<div class="font-price-display text-price-display text-on-surface">
+                      £1,150 <span class="font-body-sm text-body-sm text-secondary font-normal">pp</span>
+</div>
+<span class="block text-[11px] font-label-sm text-tertiary-container font-semibold mt-0.5">
+                      Split scheme: £450 deposit
+                    </span>
+</div>
+<a class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary-fixed-dim font-label-lg text-label-lg font-bold shadow-sm transition-all hover:shadow" href="#">
+                    View Details
+                  </a>
+</div>
+</div>
+</article>
+<!-- PACKAGE 3: Vienna Imperial Christmas & Strauss Gala -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col group transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Vienna Rathausplatz Christmas market at twilight with illuminated Neo-Gothic City Hall backdrop, glowing light arches, traditional carousel and warm artisan booths, Schönbrunn Palace festive courtyard visible, elegant evening European holiday atmosphere with refined warmth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD06NRs8Bpz7A58neAnH2oLvkWPRBzkT-LphZ7vnPfScf5ufrNUCTeiJlhJOGbtbi071xiuzXSQDnjiZpXRh7SV2P-hSPI8o7ygnIUphe7jlGvHyAjkDJUOZ-ig2ntbKAkRj5b8vfg3KDyGCoF35mzjuBj7nElkQaq6IQqI0MS1T9pCXkz8UL3nUEWIQy6jMKc2sbuKlaqoKMQ_ux166MIl4gG1YEc3DaGWNZubzVPYjky1ivdwJDKZ4Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary font-label-sm text-label-sm drop-shadow">
+<span class="flex items-center gap-1 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 5 Days / 4 Nights
+                  </span>
+<span class="flex items-center gap-1 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">music_note</span> Gala Included
+                  </span>
+</div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm mb-1 uppercase tracking-wider">
+<span>Vienna, Austria</span>
+<span class="text-tertiary-container font-bold">Christmas Markets</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                    Vienna Imperial Christmas &amp; Strauss Gala
+                  </h3>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    Regal Habsburg splendour, private guided access to Schönbrunn Palace, and an evening Strauss orchestra performance.
+                  </p>
+<div class="mt-space-sm pt-space-xs space-y-1.5 bg-surface-container-low/70 p-3 rounded-lg">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">castle</span>
+<span>Habsburg Palace Private Tour</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">piano</span>
+<span>Strauss &amp; Mozart Concert Seat</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">wine_bar</span>
+<span>Viennese Mulled Wine Tasting</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-end justify-between gap-2">
+<div>
+<span class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary">From</span>
+<div class="font-price-display text-price-display text-on-surface">
+                      £780 <span class="font-body-sm text-body-sm text-secondary font-normal">pp</span>
+</div>
+<span class="block text-[11px] font-label-sm text-tertiary-container font-semibold mt-0.5">
+                      Split scheme: £450 deposit
+                    </span>
+</div>
+<a class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary-fixed-dim font-label-lg text-label-lg font-bold shadow-sm transition-all hover:shadow" href="#">
+                    View Details
+                  </a>
+</div>
+</div>
+</article>
+<!-- PACKAGE 4: Budapest Thermal Lights & Danube Cruise -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col group transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Hungarian Parliament building magnificently illuminated in gold across the calm dark blue Danube River at night in Budapest, reflections shimmering on water, luxury river cruise vessel passing, warm atmospheric European architectural grandeur." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMsJ1MoB1GbT2iHok6btt3vcyU0m5HHb7JuRG0iN_ZYHmkP-_f1E-6-LF-3J_GyZAli2pWJe5O4pu9HRBCpgCW-zzRn_nXbrIvTly-TmBpKbQuGrN4m3FCfrH1oYhJUV9Zrm0C9ijSD-CsHVgSOloxTf266KgJnHg4mpsmFmzYsxSsqdLKShD-GL_SqjUgzQIHCUazc2tmLU5rbnqmdOmG1thjDNg6T3Gpkwsa69uzZUvP7zAQnR0hOg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary font-label-sm text-label-sm drop-shadow">
+<span class="flex items-center gap-1 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 4 Days / 3 Nights
+                  </span>
+<span class="flex items-center gap-1 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">directions_boat</span> Danube Cruise
+                  </span>
+</div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm mb-1 uppercase tracking-wider">
+<span>Budapest, Hungary</span>
+<span class="text-primary font-bold">Thermal Spas &amp; River</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                    Budapest Thermal Lights &amp; Danube Cruise
+                  </h3>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    Steamy mineral soaks in historic Neo-Baroque baths followed by a candlelit evening river cruise under illuminated bridges.
+                  </p>
+<div class="mt-space-sm pt-space-xs space-y-1.5 bg-surface-container-low/70 p-3 rounded-lg">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">hot_tub</span>
+<span>Széchenyi Thermal VIP Cabin Pass</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">directions_boat</span>
+<span>Evening Danube Champagne Cruise</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">hotel</span>
+<span>4★ Riverside Boutique Hotel</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-end justify-between gap-2">
+<div>
+<span class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary">From</span>
+<div class="font-price-display text-price-display text-on-surface">
+                      £620 <span class="font-body-sm text-body-sm text-secondary font-normal">pp</span>
+</div>
+<span class="block text-[11px] font-label-sm text-tertiary-container font-semibold mt-0.5">
+                      Split scheme: £450 deposit
+                    </span>
+</div>
+<a class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary-fixed-dim font-label-lg text-label-lg font-bold shadow-sm transition-all hover:shadow" href="#">
+                    View Details
+                  </a>
+</div>
+</div>
+</article>
+<!-- PACKAGE 5: Lapland Arctic Auroras & Glass Igloos -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col group transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Vibrant green aurora borealis northern lights dancing across the dark Arctic night sky above a snowy Finnish Lapland pine forest, glowing heated glass igloos nestled in pristine white snow, silhouettes of huskies, magical ethereal winter expedition aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYHLEolMrerZAALqgQxXzgUBHbW-cPwfzDUbPxNT-rruYC76nLhVH077ZSKLKsUWjZCsCjVzbMaDrMBvNdDHYoJpGJb8AxRoGz8WmpOjNt2Fja2Rm0i7vA3Ropx7p3AsXx85CRzbaad9P7nUHl5eo1bxEYwXw4-YsVZBPx36BHoQ3gkMjcVU1qO19DNR94BApAMI7SHWpvoeciw7GUvSwhhn6q05kNr2-CTV38JiaX2y-tmNOBcfLICg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none"></div>
+<div class="absolute top-3 left-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm uppercase tracking-wider shadow-sm font-bold">
+<span class="material-symbols-outlined text-[13px] text-primary">flare</span>
+                    Arctic Premium
+                  </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary font-label-sm text-label-sm drop-shadow">
+<span class="flex items-center gap-1 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 5 Days / 4 Nights
+                  </span>
+<span class="flex items-center gap-1 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">chalet</span> Glass Igloo
+                  </span>
+</div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm mb-1 uppercase tracking-wider">
+<span>Rovaniemi, Finland</span>
+<span class="text-primary font-bold">Northern Lights</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                    Lapland Arctic Auroras &amp; Glass Igloos
+                  </h3>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    Sleep under celestial emerald ribbons in a heated panoramic glass igloo with guided husky sledding and reindeer farm safari.
+                  </p>
+<div class="mt-space-sm pt-space-xs space-y-1.5 bg-surface-container-low/70 p-3 rounded-lg">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">chalet</span>
+<span>2 Nights Heated Glass Igloo</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">pets</span>
+<span>Wilderness Husky Sled Expedition</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">explore</span>
+<span>Nightly Aurora Chase Guides</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-end justify-between gap-2">
+<div>
+<span class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary">From</span>
+<div class="font-price-display text-price-display text-on-surface">
+                      £1,490 <span class="font-body-sm text-body-sm text-secondary font-normal">pp</span>
+</div>
+<span class="block text-[11px] font-label-sm text-tertiary-container font-semibold mt-0.5">
+                      Split scheme: £450 deposit
+                    </span>
+</div>
+<a class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary-fixed-dim font-label-lg text-label-lg font-bold shadow-sm transition-all hover:shadow" href="#">
+                    View Details
+                  </a>
+</div>
+</div>
+</article>
+<!-- PACKAGE 6: Bavarian Castles & Nuremberg Markets -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col group transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Neuschwanstein Castle perched on a dramatic snow-covered Bavarian mountain ridge in winter, golden sunset lighting the fairytale spires, quaint festive Nuremberg market square in inset feeling, warm German gingerbread stalls, majestic high-end travel photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7uZpTToUx8bdZrdjQRpSWx4dGW_tBSOcH-hX57T--BwAXuZgHqeUufgQuuo3gimP1dk3CgzANykJjOneLLvuQXJ1bS0bh_c6zEs9t0I3rO7BsC5bwbD4me4IXtlNGSJE51Z4vYJvGpKPm6PrZlGXlSHLRXQ-_gj5WTLOllksm1f3MJ5nfGN-82z72DweMnwLtRXmanoIKJT9bhtWC6BBd3-OFdvnHF_Nm9Oizt4N4Qz-zwcLBkK2kug"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary font-label-sm text-label-sm drop-shadow">
+<span class="flex items-center gap-1 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 5 Days / 4 Nights
+                  </span>
+<span class="flex items-center gap-1 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">castle</span> Castle Entry
+                  </span>
+</div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm mb-1 uppercase tracking-wider">
+<span>Munich &amp; Nuremberg, Germany</span>
+<span class="text-tertiary-container font-bold">Christmas Markets</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                    Bavarian Castles &amp; Nuremberg Markets
+                  </h3>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    Fairytale Alpine castles of King Ludwig II combined with Europe’s oldest Christkindlesmarkt and authentic Bavarian banquets.
+                  </p>
+<div class="mt-space-sm pt-space-xs space-y-1.5 bg-surface-container-low/70 p-3 rounded-lg">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">castle</span>
+<span>Neuschwanstein Guided VIP Pass</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">train</span>
+<span>DB High-Speed Rail Connections</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">dinner_dining</span>
+<span>Authentic 3-Course Bavarian Dinners</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-end justify-between gap-2">
+<div>
+<span class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary">From</span>
+<div class="font-price-display text-price-display text-on-surface">
+                      £840 <span class="font-body-sm text-body-sm text-secondary font-normal">pp</span>
+</div>
+<span class="block text-[11px] font-label-sm text-tertiary-container font-semibold mt-0.5">
+                      Split scheme: £450 deposit
+                    </span>
+</div>
+<a class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary-fixed-dim font-label-lg text-label-lg font-bold shadow-sm transition-all hover:shadow" href="#">
+                    View Details
+                  </a>
+</div>
+</div>
+</article>
+</div>
+<!-- Bottom Pagination Controls -->
+<nav aria-label="Holidays catalog pagination" class="mt-space-2xl flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+              Showing <strong class="text-on-surface">1 - 6</strong> of 24 packages
+            </span>
+<div class="flex items-center gap-1.5 font-label-md text-label-md">
+<button class="px-3 py-2 rounded-lg bg-surface-container-low text-outline cursor-not-allowed flex items-center gap-1" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span> Previous
+              </button>
+<button class="w-9 h-9 rounded-lg bg-primary text-on-primary font-bold shadow-sm">1</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">2</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">3</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">4</button>
+<button class="px-3 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors flex items-center gap-1">
+                Next <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</nav>
+</main>
+</div>
+</div>
+</section>
+<!-- Bespoke Airport Transfer & Regional UK Concierge Help Banner -->
+<section class="w-full bg-surface-container-high/40 py-space-xl">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg lg:p-space-xl shadow-sm flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-start gap-space-md max-w-2xl">
+<div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center shrink-0 text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[26px]">airport_shuttle</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Need bespoke UK airport transfers or custom departure dates?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Every package can be custom-tailored with door-to-terminal chauffeur transfers from Heathrow, Gatwick, Manchester, Birmingham, and Edinburgh.
+            </p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm w-full lg:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-on-primary hover:bg-on-primary-fixed-variant font-label-lg text-label-lg font-bold shadow-sm transition-all text-center" href="tel:08004567890">
+<span class="material-symbols-outlined text-[18px]">call</span>
+            Call 0800 456 7890
+          </a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg font-bold transition-all text-center" href="#">
+            Enquire Bespoke
+          </a>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low pt-space-2xl pb-space-xl shadow-[0_-4px_16px_0_rgba(13,27,42,0.03)]"><div class="max-w-7xl mx-auto px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl pb-space-2xl"><div class="lg:col-span-2 space-y-space-md"><div class="flex items-center gap-space-sm"><img alt="JILIT Holidays Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X3FIs3tjapG5gkrx5XBiaSkO1qAJ-9ZgjGOxDmzWMfexN_j0k5S9EH0tLfLKIodbyWCAVPLv9KBx526rRk1derTa9wLm8vd8Jie9KL418IYcJnf-A9y-SyEzdWPdMBEXhWJ2q3IjmIekU264UtHeab5FLhQ20dkSTu0YzvtZdv3Si7JqLaApsDAUONlobebJd9kKI-Gg3RMEQ0dTotLbnN9XzzvMMvdsg5WqqTfKCtBbyQNhl8MoyEny0"/><span class="font-headline-sm text-headline-sm tracking-tight text-primary-container font-bold">JILIT Holidays</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Curated premium holiday escapes, hand-crafted European journeys, and punctual executive UK airport transfers. Engineered with modern reliability and British touring distinction.</p><div class="flex flex-wrap items-center gap-space-sm pt-space-xs"><span class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-card text-on-surface font-label-sm text-label-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[16px] text-on-tertiary-container">verified_user</span>ATOL Protected</span><span class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-card text-on-surface font-label-sm text-label-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[16px] text-on-tertiary-container">shield</span>ABTA Bonded</span><span class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-card text-on-surface font-label-sm text-label-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[16px] text-status-success">lock</span>Secure Booking</span></div></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary-container uppercase tracking-wider font-bold">Discover</h3><ul class="space-y-space-xs"><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="holidays" href="#">Holidays &amp; Tours</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="airport-transfers" href="#">Airport Transfers</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="blog" href="#">Travel Journal &amp; Blog</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a></li></ul></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary-container uppercase tracking-wider font-bold">Client Care</h3><ul class="space-y-space-xs"><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-account" href="#">My Account</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-bookings" href="#">My Bookings</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-conditions" href="#">Terms &amp; Conditions</a></li></ul></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary-container uppercase tracking-wider font-bold">UK Concierge</h3><div class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary-container mt-0.5">call</span><div><span class="block font-semibold text-on-surface">0800 456 7890</span><span class="text-[12px]">Mon–Sat, 8am–7pm GMT</span></div></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary-container mt-0.5">mail</span><a class="hover:text-on-surface transition-colors" href="mailto:support@jilitholidays.co.uk">support@jilitholidays.co.uk</a></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary-container mt-0.5">location_on</span><span>120 Pall Mall, St. James's, London SW1Y 5ED, United Kingdom</span></div></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-container-high/30 rounded-xl p-space-md"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 JILIT Holidays Ltd. Registered in England &amp; Wales. All rights reserved.</p><div class="flex items-center gap-space-lg font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-conditions" href="#">Terms &amp; Conditions</a><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">ABTA Y6841 / ATOL 9822</span></div></div></div></footer></body></html>

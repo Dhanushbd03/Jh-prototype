@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "status-warning-bg": "#FEFCBF",
+          "on-secondary-fixed": "#0f1c2c",
+          "surface-container-high": "#dee9ff",
+          "status-error": "#C53030",
+          "tertiary-container": "#473500",
+          "status-success": "#1E7E34",
+          "surface-card": "#FFFFFF",
+          "inverse-on-surface": "#ebf1ff",
+          "error-container": "#ffdad6",
+          "surface-dim": "#cfdaf1",
+          "outline": "#707978",
+          "on-secondary-fixed-variant": "#3a4859",
+          "on-error-container": "#93000a",
+          "secondary": "#525f71",
+          "surface-container-low": "#f0f3ff",
+          "tertiary": "#2d2000",
+          "surface-variant": "#d8e3f9",
+          "on-tertiary-container": "#c59b27",
+          "primary-fixed": "#beebe9",
+          "surface-canvas": "#FAFAFA",
+          "border-subtle": "#E2E8F0",
+          "surface-container": "#e7eeff",
+          "error": "#ba1a1a",
+          "inverse-surface": "#263142",
+          "on-tertiary-fixed": "#251a00",
+          "on-tertiary": "#ffffff",
+          "primary": "#002727",
+          "status-success-bg": "#EBF8EE",
+          "surface-container-highest": "#d8e3f9",
+          "inverse-primary": "#a2cfcd",
+          "secondary-fixed": "#d6e4f9",
+          "on-surface": "#111c2c",
+          "on-primary-fixed": "#00201f",
+          "primary-container": "#0f3e3d",
+          "on-background": "#111c2c",
+          "surface-bright": "#f9f9ff",
+          "surface-muted": "#F3F5F7",
+          "secondary-container": "#d3e1f6",
+          "accent-gold-hover": "#AC8419",
+          "on-primary-container": "#7da9a7",
+          "outline-variant": "#c0c8c7",
+          "background": "#f9f9ff",
+          "secondary-fixed-dim": "#bac8dc",
+          "border-strong": "#CBD5E1",
+          "status-error-bg": "#FFF5F5",
+          "on-surface-variant": "#404848",
+          "on-error": "#ffffff",
+          "surface-tint": "#3b6664",
+          "on-secondary-container": "#566475",
+          "primary-fixed-dim": "#a2cfcd",
+          "on-tertiary-fixed-variant": "#5a4300",
+          "surface-container-lowest": "#ffffff",
+          "tertiary-fixed": "#ffdf98",
+          "surface": "#f9f9ff",
+          "status-warning": "#B7791F",
+          "tertiary-fixed-dim": "#eec14b",
+          "on-primary": "#ffffff",
+          "accent-gold-subtle": "#FDF9EE",
+          "on-primary-fixed-variant": "#224d4c",
+          "on-secondary": "#ffffff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-3xl": "6rem",
+          "gutter": "1.5rem",
+          "gutter-mobile": "1rem",
+          "space-lg": "1.5rem",
+          "margin-mobile": "1.25rem",
+          "space-xl": "2.5rem",
+          "margin": "3rem",
+          "space-sm": "0.5rem",
+          "space-2xl": "4rem",
+          "space-md": "1rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "price-display": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Playfair Display"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "headline-lg": ["Playfair Display"],
+          "display": ["Playfair Display"],
+          "body-md": ["Plus Jakarta Sans"],
+          "headline-xl-mobile": ["Playfair Display"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"],
+          "headline-xl": ["Playfair Display"],
+          "display-mobile": ["Playfair Display"]
+        },
+        "fontSize": {
+          "price-display": ["28px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600"}],
+          "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+          "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700"}],
+          "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+          "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "display": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+          "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "headline-xl-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "headline-sm": ["18px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600"}],
+          "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+          "headline-md": ["22px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+          "display-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+        }
+      }
+    }
+  };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm" data-path="holidays" href="#"><img alt="JILIT Holidays Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X3FIs3tjapG5gkrx5XBiaSkO1qAJ-9ZgjGOxDmzWMfexN_j0k5S9EH0tLfLKIodbyWCAVPLv9KBx526rRk1derTa9wLm8vd8Jie9KL418IYcJnf-A9y-SyEzdWPdMBEXhWJ2q3IjmIekU264UtHeab5FLhQ20dkSTu0YzvtZdv3Si7JqLaApsDAUONlobebJd9kKI-Gg3RMEQ0dTotLbnN9XzzvMMvdsg5WqqTfKCtBbyQNhl8MoyEny0"/><span class="font-headline-sm text-headline-sm tracking-tight text-primary-container font-bold">JILIT Holidays</span></a></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary font-bold rounded-xl"><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="holidays" href="#">Holidays</a><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="airport-transfers" href="#">Airport Transfers</a><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="blog" href="#">Blog</a><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="my-account" href="#">My Account</a></nav><div class="flex items-center gap-space-md"><a class="hidden md:inline-flex items-center justify-center px-space-lg py-space-sm rounded-xl bg-on-tertiary-container hover:bg-accent-gold-hover text-on-tertiary font-label-lg text-label-lg shadow-[0_1px_3px_0_rgba(15,62,61,0.04)] transition-all" data-path="holidays" href="#">Explore Holidays</a><a class="flex items-center gap-space-xs" data-path="my-account" href="#"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></a></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<!-- Interactive Toast Notification -->
+<div class="fixed top-24 right-8 z-50 transform translate-y-4 opacity-0 pointer-events-none transition-all duration-300 ease-out flex items-center gap-space-sm px-space-md py-space-sm bg-inverse-surface text-inverse-on-surface rounded-xl shadow-xl" id="copy-toast">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed">check_circle</span>
+<span class="font-label-sm text-label-sm">Booking reference copied to clipboard</span>
+</div>
+<!-- Booking Journey Progress Stepper -->
+<section class="w-full bg-surface-container-low/70 py-space-md">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs font-label-sm text-label-sm text-secondary mb-space-md">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Holidays</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Prague Christmas Tour</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Booking Confirmation</span>
+</nav>
+<!-- Step Indicators -->
+<div class="grid grid-cols-4 gap-space-sm md:gap-space-md items-center">
+<!-- Step 1 -->
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="hidden sm:block min-w-0">
+<span class="block font-label-sm text-label-sm text-secondary uppercase tracking-wider">Step 1</span>
+<span class="block font-label-md text-label-md text-on-surface font-semibold truncate">Travellers &amp; Scheme</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="hidden sm:block min-w-0">
+<span class="block font-label-sm text-label-sm text-secondary uppercase tracking-wider">Step 2</span>
+<span class="block font-label-md text-label-md text-on-surface font-semibold truncate">Guest Details</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="hidden sm:block min-w-0">
+<span class="block font-label-sm text-label-sm text-secondary uppercase tracking-wider">Step 3</span>
+<span class="block font-label-md text-label-md text-on-surface font-semibold truncate">Secure Settlement</span>
+</div>
+</div>
+<!-- Step 4 (Active Confirmed) -->
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-status-success text-on-primary flex items-center justify-center font-label-sm text-label-sm shadow-sm shrink-0 ring-4 ring-status-success-bg">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+</div>
+<div class="hidden sm:block min-w-0">
+<span class="block font-label-sm text-label-sm text-status-success uppercase tracking-wider font-bold">Step 4 — Complete</span>
+<span class="block font-label-md text-label-md text-on-surface font-bold truncate">Booking Confirmed</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Hero Success State & Booking Reference Header -->
+<section class="w-full bg-surface-container-lowest shadow-sm py-space-xl">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<!-- Success Message -->
+<div class="space-y-space-xs max-w-2xl">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-status-success-bg text-status-success font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-status-success animate-pulse"></span>
+            TRANSACTION AUTHORISED &amp; FLIGHT-INCLUSIVE ATOL BONDED
+          </div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">
+            Booking Confirmed! Your Prague Escape Awaits
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            We have dispatched your comprehensive travel documentation, booking itinerary, and official ATOL certificate to <span class="font-semibold text-on-surface">james.holloway@example.co.uk</span>.
+          </p>
+</div>
+<!-- Quick Primary Action Triggers -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-tertiary-container hover:bg-accent-gold-hover text-on-tertiary font-label-lg text-label-lg shadow-md transition-all active:scale-95" id="download-voucher-btn" onclick="triggerDownload()">
+<span class="material-symbols-outlined text-[18px]">download</span>
+            Download ATOL Voucher
+          </button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors" onclick="window.print()">
+<span class="material-symbols-outlined text-[18px]">print</span>
+            Print Receipt
+          </button>
+<button class="inline-flex items-center gap-space-xs px-space-sm py-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container text-secondary hover:text-on-surface font-label-sm text-label-sm transition-colors" title="Apple &amp; Google Wallet">
+<span class="material-symbols-outlined text-[18px]">wallet</span>
+            Add to Wallet
+          </button>
+</div>
+</div>
+<!-- Key Booking Reference Highlight Bar -->
+<div class="mt-space-lg p-space-md bg-surface-container-low rounded-xl flex flex-wrap items-center justify-between gap-space-md">
+<!-- Reference Pill -->
+<div class="flex items-center gap-space-md">
+<div>
+<span class="block font-label-sm text-label-sm text-secondary uppercase tracking-wider">Booking Reference</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-headline-sm text-headline-sm font-bold text-primary tracking-wider font-mono" id="booking-ref-val">JILIT-849204</span>
+<button class="p-1 rounded-md hover:bg-surface-container text-secondary hover:text-primary transition-colors" onclick="copyReference()" title="Copy reference code">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ATOL Certificate -->
+<div>
+<span class="block font-label-sm text-label-sm text-secondary uppercase tracking-wider">ATOL Protection Certificate</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">verified</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">ATOL-9822-49102</span>
+</div>
+</div>
+<!-- Issue Date -->
+<div>
+<span class="block font-label-sm text-label-sm text-secondary uppercase tracking-wider">Booking Date</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface mt-0.5 block">04 October 2025</span>
+</div>
+<!-- Booking Status Badge -->
+<div>
+<span class="block font-label-sm text-label-sm text-secondary uppercase tracking-wider">Status</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-status-success-bg text-status-success font-label-sm text-label-sm font-bold mt-0.5">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+            CONFIRMED &amp; BONDED
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Section: Two-Column Master Layout (65% / 35%) -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-space-xl w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Column (65% / 8 cols) -->
+<div class="lg:col-span-8 space-y-space-lg">
+<!-- 1. Tour & Accommodation Summary Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm bg-surface-container-low/40 p-space-md rounded-lg">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Holiday Itinerary &amp; Stays</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">
+                Prague Christmas Tour — Festive Season 2025
+              </h2>
+</div>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold shrink-0">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+              4 Days / 3 Nights
+            </span>
+</div>
+<!-- Media + Key Venue Details -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+<div class="md:col-span-5 h-48 rounded-xl overflow-hidden shadow-sm relative group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Dusk photograph of Prague Old Town Square during the enchanting Christmas market. The twin gothic spires of Our Lady before Tyn glow warmly in festive amber lighting, illuminated wooden festive chalets bustle below, soft falling snow catches twilight reflection in an elegant British editorial luxury travel aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbW57fhvFl2UoTwR6Z4SXdVgy2Q0Y-DsBsMeMTPINm615w5QWtOYbAps96UU3SvNojcPT3vzIVyNP20zuSaeomSYnXJ7Aqy15rppqQlELa6yrp4DCVywtpZ83tlW8XsZKud0spfq1TpMFGUqnfXH2DBrQtiOudDN3SWu9HpO2DDiXF7jX-my0QWINylh1QhSTFqRzCCsCKVASR693MsuqVnbVjPziy2Q6vNK_aRT1pQBpUKNyWDsDlbA"/>
+<div class="absolute bottom-2 left-2 bg-inverse-surface/80 backdrop-blur-md text-inverse-on-surface px-2.5 py-1 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+                Old Town Square, Prague
+              </div>
+</div>
+<div class="md:col-span-7 space-y-space-xs">
+<!-- Dates Row -->
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary mt-0.5">event</span>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Travel Window</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Friday 05 Dec – Monday 08 Dec 2025</span>
+</div>
+</div>
+<!-- Accommodation Row -->
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary mt-0.5">hotel</span>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Confirmed Lodging</span>
+<span class="font-body-md text-body-md font-bold text-on-surface">Grand Hotel Bohemia (4★ Superior Heritage)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Králodvorská 4, Prague 1 Old Town — 1x Executive Heritage Family Suite</p>
+</div>
+</div>
+<!-- Flight & Transfer Link -->
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary mt-0.5">airport_shuttle</span>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Chauffeur Service Included</span>
+<span class="font-body-sm text-body-sm text-on-surface">Václav Havel Airport (PRG) ↔ Grand Hotel Bohemia (Private Mercedes V-Class)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Guaranteed Inclusions Recap -->
+<div class="bg-surface-container-low/60 rounded-xl p-space-md space-y-space-xs">
+<h3 class="font-label-lg text-label-lg font-bold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+              Guaranteed Package Inclusions Recap
+            </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-space-md gap-y-space-xs font-body-sm text-body-sm text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-success">check_circle</span>
+<span>Grand Hotel Bohemia daily artisan hot &amp; cold breakfast</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-success">check_circle</span>
+<span>Exclusive historic neo-Baroque Boccaccio Hall access</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-success">check_circle</span>
+<span>Reserved front-nave seats: St. Nicholas Advent Concert</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-success">check_circle</span>
+<span>British tour host &amp; English historian Old Town walking tour</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. Travellers & Lead Passenger Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px] text-primary">groups</span>
+              Manifest of Travellers (3 Guests)
+            </h2>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Party Roster</span>
+</div>
+<!-- Guest Manifest Badges -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- Lead -->
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1">
+<span class="inline-block px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-[10px] font-bold uppercase tracking-wider">Lead Passenger</span>
+<p class="font-label-lg text-label-lg font-bold text-on-surface">Mr. James Holloway</p>
+<p class="font-body-sm text-body-sm text-secondary">Adult • +44 7700 900142</p>
+</div>
+<!-- Guest 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1">
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-[10px] font-bold uppercase tracking-wider">Passenger 2</span>
+<p class="font-label-lg text-label-lg font-bold text-on-surface">Mrs. Eleanor Holloway</p>
+<p class="font-body-sm text-body-sm text-secondary">Adult • eleanor.h@example.co.uk</p>
+</div>
+<!-- Guest 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1">
+<span class="inline-block px-2 py-0.5 rounded bg-secondary-container text-on-secondary-fixed font-label-sm text-[10px] font-bold uppercase tracking-wider">Passenger 3 (Child)</span>
+<p class="font-label-lg text-label-lg font-bold text-on-surface">Master Thomas Holloway</p>
+<p class="font-body-sm text-body-sm text-secondary">Child (Age 8) • UK Citizen</p>
+</div>
+</div>
+<!-- Special Requests Confirmation -->
+<div class="p-space-md rounded-lg bg-accent-gold-subtle space-y-1">
+<div class="flex items-center gap-1.5 text-on-tertiary-container font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+              Confirmed Special Requests &amp; Room Allocations
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              1 Double Bed + 1 Premium Rollaway Bed confirmed in Family Suite. 1 Vegetarian menu profile noted for Prague Castle festive banquet. 1x Group-2 booster seat allocated for executive Mercedes airport chauffeur transfers.
+            </p>
+</div>
+</div>
+<!-- 3. Financial & Payment Settlement Ledger -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg space-y-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px] text-primary">receipt_long</span>
+              Financial &amp; Settlement Ledger
+            </h2>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-status-success-bg text-status-success font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+              PAID IN FULL — ATOL PROTECTED
+            </span>
+</div>
+<!-- Ledger Table -->
+<div class="bg-surface-container-low rounded-xl p-space-md space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs font-label-sm text-label-sm text-secondary uppercase tracking-wider">
+<span>Item Description</span>
+<span>Settled Amount</span>
+</div>
+<div class="space-y-space-xs font-body-sm text-body-sm text-on-surface">
+<div class="flex justify-between items-center py-1">
+<div>
+<span class="font-semibold">Adult Package Rate (x2 Guests)</span>
+<span class="block text-secondary font-label-sm text-[12px]">£700.00 per adult • 4★ Hotel, Concert &amp; Chauffeur</span>
+</div>
+<span class="font-semibold text-right">£1,400.00</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<div>
+<span class="font-semibold">Child Rate (x1 Guest, Age 8)</span>
+<span class="block text-secondary font-label-sm text-[12px]">Family concession tier (2-11 yrs)</span>
+</div>
+<span class="font-semibold text-right">£675.00</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="text-secondary">UK Airport Passenger Duty &amp; Handling Levies</span>
+<span class="text-status-success font-semibold text-right">£0.00 (Inclusive)</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="text-secondary">Civil Aviation Authority ATOL Protection Contribution (APC)</span>
+<span class="text-status-success font-semibold text-right">£0.00 (Inclusive)</span>
+</div>
+</div>
+<!-- Ledger Total Highlight -->
+<div class="pt-space-sm mt-space-sm bg-surface-container-lowest p-space-md rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<span class="block font-label-sm text-label-sm text-secondary uppercase tracking-wider">Payment Scheme Applied</span>
+<span class="font-body-md text-body-md font-bold text-on-surface">Option A — Full Advance Settlement</span>
+<span class="block font-label-sm text-label-sm text-secondary">Card: Visa ending 4092 • Auth code: #AUTH-78329</span>
+</div>
+<div class="text-right">
+<span class="block font-label-sm text-label-sm text-secondary uppercase tracking-wider">Total Paid Today</span>
+<span class="font-price-display text-price-display text-primary font-bold">£2,075.00</span>
+<span class="block font-label-sm text-label-sm text-status-success font-semibold">Remaining Balance: £0.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Next Steps & Pre-Departure Checklist -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg space-y-space-md">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">What Happens Now?</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">
+              Important Pre-Departure Journey Milestones
+            </h2>
+</div>
+<!-- Timeline Steps -->
+<div class="space-y-space-md relative pl-6 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-high">
+<!-- Timeline Item 1 -->
+<div class="relative">
+<span class="absolute -left-[27px] top-1 w-4 h-4 rounded-full bg-primary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+</span>
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Immediate Action</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Verify Passport Validity for Schengen Entry</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  UK passport holders traveling to the Czech Republic must hold a passport issued less than 10 years before departure date and valid for at least 3 months after intended return (08 March 2026).
+                </p>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative">
+<span class="absolute -left-[27px] top-1 w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</span>
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">30 Days Prior (05 November 2025)</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Detailed Tour Compendium &amp; Concert Program</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  We will dispatch the finalized minute-by-minute itinerary, private chauffeur dispatch contact details, dress code advisory for St. Nicholas Hall, and restaurant reservation vouchers.
+                </p>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative">
+<span class="absolute -left-[27px] top-1 w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</span>
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">7 Days Prior (28 November 2025)</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Digital Boarding Passes &amp; Dedicated Concierge WhatsApp</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Access live airport driver tracking and direct WhatsApp concierge dispatch line for instantaneous in-resort assistance throughout your stay in Prague.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (35% / 4 cols) - Sticky Actions & Concierge Support -->
+<div class="lg:col-span-4 space-y-space-lg lg:sticky lg:top-24">
+<!-- 1. Booking Action Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg space-y-space-md">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Self-Service Portal</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Manage Your Escape</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Review room preferences, upload passenger passport numbers, or make itinerary adjustments anytime.
+            </p>
+</div>
+<div class="space-y-space-sm">
+<a class="w-full inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-colors shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px]">manage_accounts</span>
+              Manage This Booking
+            </a>
+<a class="w-full inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">travel_explore</span>
+              View in My Bookings
+            </a>
+<div class="pt-space-xs text-center">
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors inline-flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">arrow_back</span>
+                Return to Holiday Directory
+              </a>
+</div>
+</div>
+</div>
+<!-- 2. UK Dedicated Concierge & Emergency Desk -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">UK Concierge Desk</h3>
+<p class="font-body-sm text-body-sm text-secondary">Personal booking assistance</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Have questions regarding dietary requests, airport pickup timing, or Prague excursions? Your dedicated UK travel consultant is ready to assist.
+          </p>
+<div class="space-y-space-sm bg-surface-container-low p-space-md rounded-xl font-body-sm text-body-sm text-on-surface">
+<!-- Freephone -->
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5">call</span>
+<div>
+<span class="font-semibold block text-on-surface">0800 456 7890</span>
+<span class="font-label-sm text-[12px] text-secondary">Freephone UK • Mon–Sat 8am–7pm GMT</span>
+</div>
+</div>
+<!-- Email -->
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5">mail</span>
+<div>
+<a class="font-semibold hover:text-primary transition-colors block text-on-surface" href="mailto:bookings@jilitholidays.co.uk">
+                  bookings@jilitholidays.co.uk
+                </a>
+<span class="font-label-sm text-[12px] text-secondary">Average response: &lt; 2 hours</span>
+</div>
+</div>
+<!-- Address -->
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5">location_on</span>
+<div>
+<span class="font-semibold block text-on-surface">Pall Mall Private Suite</span>
+<span class="font-label-sm text-[12px] text-secondary">120 Pall Mall, St. James's, London SW1Y 5ED</span>
+</div>
+</div>
+<!-- 24/7 Resort helpline -->
+<div class="pt-2 mt-2 bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-status-success">health_and_safety</span>
+<span class="font-label-sm text-[12px] text-on-surface font-semibold">
+                24/7 In-Resort Emergency Helpline active on departure day.
+              </span>
+</div>
+</div>
+</div>
+<!-- 3. Trust & Consumer Protection Seal Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[22px] text-tertiary-container">verified</span>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface uppercase tracking-wider">
+              Protected &amp; Regulated
+            </h3>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low text-center space-y-0.5">
+<span class="font-label-sm text-label-sm text-secondary block font-bold">ATOL BOND</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary block">#9822</span>
+<span class="font-label-sm text-[10px] text-secondary block">CAA UK Protection</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low text-center space-y-0.5">
+<span class="font-label-sm text-label-sm text-secondary block font-bold">ABTA BONDED</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary block">#Y6841</span>
+<span class="font-label-sm text-[10px] text-secondary block">Standard of Excellence</span>
+</div>
+</div>
+<!-- Trust Guarantee Explainer -->
+<div class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<p class="text-[12px] leading-relaxed">
+              All client monies are held securely within independent, ring-fenced UK trust account structures. Your booking is 100% financially insured under the Package Travel and Linked Travel Arrangements Regulations 2018.
+            </p>
+</div>
+</div>
+<!-- Mini Interactive Destination Widget -->
+<div class="bg-surface-container-low rounded-xl p-space-md space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">Prague Weather Forecast</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">December Seasonal</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[28px] text-secondary">ac_unit</span>
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">2°C / -3°C</span>
+<span class="block font-label-sm text-[11px] text-secondary">Crisp • Light evening snow</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-label-sm text-label-sm">
+              Warm layers advised
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Script for Client Interaction: Clipboard copy and voucher trigger -->
+<script>
+    function copyReference() {
+      const textToCopy = "JILIT-849204";
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const toast = document.getElementById('copy-toast');
+        if (toast) {
+          toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+          toast.classList.add('opacity-100', 'translate-y-0');
+          setTimeout(() => {
+            toast.classList.remove('opacity-100', 'translate-y-0');
+            toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+          }, 2600);
+        }
+      });
+    }
+
+    function triggerDownload() {
+      const btn = document.getElementById('download-voucher-btn');
+      if (btn) {
+        const originalHtml = btn.innerHTML;
+        btn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span> Preparing PDF...';
+        setTimeout(() => {
+          btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span> Downloaded!';
+          setTimeout(() => {
+            btn.innerHTML = originalHtml;
+          }, 2000);
+        }, 1200);
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low pt-space-2xl pb-space-xl shadow-[0_-4px_16px_0_rgba(13,27,42,0.03)]"><div class="max-w-7xl mx-auto px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl pb-space-2xl"><div class="lg:col-span-2 space-y-space-md"><div class="flex items-center gap-space-sm"><img alt="JILIT Holidays Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X3FIs3tjapG5gkrx5XBiaSkO1qAJ-9ZgjGOxDmzWMfexN_j0k5S9EH0tLfLKIodbyWCAVPLv9KBx526rRk1derTa9wLm8vd8Jie9KL418IYcJnf-A9y-SyEzdWPdMBEXhWJ2q3IjmIekU264UtHeab5FLhQ20dkSTu0YzvtZdv3Si7JqLaApsDAUONlobebJd9kKI-Gg3RMEQ0dTotLbnN9XzzvMMvdsg5WqqTfKCtBbyQNhl8MoyEny0"/><span class="font-headline-sm text-headline-sm tracking-tight text-primary-container font-bold">JILIT Holidays</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Curated premium holiday escapes, hand-crafted European journeys, and punctual executive UK airport transfers. Engineered with modern reliability and British touring distinction.</p><div class="flex flex-wrap items-center gap-space-sm pt-space-xs"><span class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-card text-on-surface font-label-sm text-label-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[16px] text-on-tertiary-container">verified_user</span>ATOL Protected</span><span class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-card text-on-surface font-label-sm text-label-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[16px] text-on-tertiary-container">shield</span>ABTA Bonded</span><span class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-card text-on-surface font-label-sm text-label-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[16px] text-status-success">lock</span>Secure Booking</span></div></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary-container uppercase tracking-wider font-bold">Discover</h3><ul class="space-y-space-xs"><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="holidays" href="#">Holidays &amp; Tours</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="airport-transfers" href="#">Airport Transfers</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="blog" href="#">Travel Journal &amp; Blog</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a></li></ul></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary-container uppercase tracking-wider font-bold">Client Care</h3><ul class="space-y-space-xs"><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-account" href="#">My Account</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-bookings" href="#">My Bookings</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-conditions" href="#">Terms &amp; Conditions</a></li></ul></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary-container uppercase tracking-wider font-bold">UK Concierge</h3><div class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary-container mt-0.5">call</span><div><span class="block font-semibold text-on-surface">0800 456 7890</span><span class="text-[12px]">Mon–Sat, 8am–7pm GMT</span></div></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary-container mt-0.5">mail</span><a class="hover:text-on-surface transition-colors" href="mailto:support@jilitholidays.co.uk">support@jilitholidays.co.uk</a></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary-container mt-0.5">location_on</span><span class="">120 Pall Mall, St. James's, London SW1Y 5ED, United Kingdom</span></div></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-container-high/30 rounded-xl p-space-md"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 JILIT Holidays Ltd. Registered in England &amp; Wales. All rights reserved.</p><div class="flex items-center gap-space-lg font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-conditions" href="#">Terms &amp; Conditions</a><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">ABTA Y6841 / ATOL 9822</span></div></div></div></footer>
+</body></html>

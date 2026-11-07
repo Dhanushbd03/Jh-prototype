@@ -1,0 +1,259 @@
+---
+name: Refined Heritage Travel
+colors:
+  surface: '#f8f9fa'
+  surface-dim: '#d9dadb'
+  surface-bright: '#f8f9fa'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f3f4f5'
+  surface-container: '#edeeef'
+  surface-container-high: '#e7e8e9'
+  surface-container-highest: '#e1e3e4'
+  on-surface: '#191c1d'
+  on-surface-variant: '#3d494d'
+  inverse-surface: '#2e3132'
+  inverse-on-surface: '#f0f1f2'
+  outline: '#6d797e'
+  outline-variant: '#bcc9ce'
+  surface-tint: '#00677d'
+  primary: '#00677d'
+  on-primary: '#ffffff'
+  primary-container: '#00b4d8'
+  on-primary-container: '#00414f'
+  inverse-primary: '#4cd6fb'
+  secondary: '#535f74'
+  on-secondary: '#ffffff'
+  secondary-container: '#d4e0f9'
+  on-secondary-container: '#586378'
+  tertiary: '#7d5800'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#d79a00'
+  on-tertiary-container: '#4f3600'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#b3ebff'
+  primary-fixed-dim: '#4cd6fb'
+  on-primary-fixed: '#001f27'
+  on-primary-fixed-variant: '#004e5f'
+  secondary-fixed: '#d7e3fc'
+  secondary-fixed-dim: '#bbc7df'
+  on-secondary-fixed: '#101c2e'
+  on-secondary-fixed-variant: '#3c475b'
+  tertiary-fixed: '#ffdea9'
+  tertiary-fixed-dim: '#ffba27'
+  on-tertiary-fixed: '#271900'
+  on-tertiary-fixed-variant: '#5e4100'
+  background: '#f8f9fa'
+  on-background: '#191c1d'
+  surface-variant: '#e1e3e4'
+typography:
+  display:
+    fontFamily: Playfair Display
+    fontSize: 56px
+    fontWeight: '600'
+    lineHeight: 64px
+    letterSpacing: -0.02em
+  display-mobile:
+    fontFamily: Playfair Display
+    fontSize: 36px
+    fontWeight: '600'
+    lineHeight: 44px
+    letterSpacing: -0.01em
+  headline-xl:
+    fontFamily: Playfair Display
+    fontSize: 40px
+    fontWeight: '600'
+    lineHeight: 48px
+    letterSpacing: -0.015em
+  headline-xl-mobile:
+    fontFamily: Playfair Display
+    fontSize: 28px
+    fontWeight: '600'
+    lineHeight: 36px
+    letterSpacing: -0.01em
+  headline-lg:
+    fontFamily: Playfair Display
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: 40px
+    letterSpacing: -0.01em
+  headline-lg-mobile:
+    fontFamily: Playfair Display
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: 0em
+  headline-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 22px
+    fontWeight: '600'
+    lineHeight: 30px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 18px
+    fontWeight: '600'
+    lineHeight: 26px
+    letterSpacing: 0em
+  body-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: 28px
+    letterSpacing: 0em
+  body-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 15px
+    fontWeight: '400'
+    lineHeight: 24px
+    letterSpacing: 0em
+  body-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 13px
+    fontWeight: '400'
+    lineHeight: 20px
+    letterSpacing: 0.01em
+  label-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 20px
+    letterSpacing: 0.02em
+  label-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+    letterSpacing: 0.04em
+  label-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 11px
+    fontWeight: '700'
+    lineHeight: 14px
+    letterSpacing: 0.06em
+  price-display:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 28px
+    fontWeight: '700'
+    lineHeight: 32px
+    letterSpacing: -0.02em
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 1rem
+  margin: 3rem
+  margin-mobile: 1.25rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+  space-2xl: 4rem
+  space-3xl: 6rem
+---
+
+## Brand & Style
+
+This design system encapsulates a premium, authoritative, and contemporary UK travel agency. It pairs the dependable gravitas of classic British touring heritage with the tactile slickness of a modern booking engine.
+
+### Emotional Target & Voice
+The emotional tone balances aspirational discovery with grounded certainty. Travellers should perceive the platform as curated, reliable, prestigious, and calm. The voice avoids hyperbole or discount-aggregator clutter, prioritizing editorial photography, clear pricing structures, and effortless transaction flows.
+
+### Design Movement: Modern Heritage Minimalism
+The aesthetic bridges restrained British editorial design with contemporary digital product architecture. It utilizes:
+- Deep, prestige hues paired with warm mineral metallics for high-conversion highlights.
+- Generous structural whitespace and fine architectural grid divisions.
+- Crisp, low-contrast structural borders to anchor photography without visual noise.
+- Tactile, deliberate interactive states that communicate security throughout the multi-step checkout and split-payment schemes.
+
+## Colors
+
+The palette establishes an immediate standard of prestige and financial confidence:
+
+- **Primary (`#00B4D8` - Bright Ocean Cyan):** Anchors main navigation bars, primary structural headers, hero banners, and brand recognition points. Represents security and luxury.
+- **Secondary (`#0A1628` - Deep Navy):** Serves as high-contrast body typography, dark UI footers, modal headers, and dense tabular data borders.
+- **Tertiary (`#FFB703` - Warm Amber Gold):** Reserved explicitly as the high-conversion accent. Governs primary booking CTAs ("Book Now", "Pay Now"), active radio card badges, selected states, and holiday rating stars. Never dilute with excessive decorative use.
+- **Neutral (`#F8F9FA` - Off-White Neutral):** Controls secondary text labels, inclusion icons, and breadcrumb navigation.
+- **Semantic & Surface Accents:** Canvas relies on pure whites (`#FFFFFF`) layered on tinted chalk foundations (`#FAFAFA` and `#F3F5F7`). Feedback states (Success, Warning, Error) utilize low-saturation, balanced UK institutional signaling.
+
+## Typography
+
+The type system blends classical high-editorial authority with functional tabular and interface legibility:
+
+- **Playfair Display (Display & Major Headlines):** Used for primary section titles, destination feature banners, hero hooks, and editorial blog titles. Injects warmth, tradition, and bespoke luxury.
+- **Plus Jakarta Sans (Interface, Body, and Conversion Data):** A geometric, modern sans-serif optimized for clear optical scanning of complex pricing tiers, travel durations, itinerary timelines, and form validations.
+- **Price Figures:** Prices and total figures always utilize `Plus Jakarta Sans` with semi-bold or bold weights and tabular lining numerals to ensure exact horizontal visual rhythm across calculation breakdowns.
+
+## Layout & Spacing
+
+The layout is built upon a standard 12-column fluid grid on desktop, scaling into an 8-column system on tablet and a single-column or 2-column stacked flow on mobile.
+
+### Canvas & Breakpoints
+- **Desktop (1280px - 1440px max-width container):** Standard 12-column grid with `1.5rem` gutters and minimum `3rem` outer margins. Filter sidebar occupies 3 columns; listing package grid spans 9 columns (3-up card layout).
+- **Tablet (768px - 1024px):** 8-column fluid grid with `1.5rem` gutters. Filter sidebar collapses into a slide-over trigger sheet. Holiday cards drop to a 2-up grid.
+- **Mobile (< 768px):** Single-column stack with `1rem` gutters and `1.25rem` outer screen padding. Booking actions lock to a persistent sticky bottom navigation bar.
+
+### Spacing Principles
+- **Editorial Breathing Room:** Hero blocks and narrative highlights adopt `space-2xl` to `space-3xl` vertical padding.
+- **Card Clustering:** Component interiors utilize tight, structured spacing (`space-md` between meta items; `space-lg` card edge padding) to maintain immediate visual coherence.
+
+## Elevation & Depth
+
+This design system avoids loud, artificial Drop Shadows or aggressive floating effects. Instead, it creates depth through refined tonal surfaces, micro-elevation, and crisp hairline framing:
+
+- **Surface Tiers:**
+  - Base canvas: `#F8F9FA`
+  - Cards, panels, and dropdowns: `#FFFFFF`
+  - Sticky bottom sheets and flight/hotel summary modules: `#FFFFFF`
+- **Hairline Framing:** Cards and form containers rely primarily on 1px solid `#E2E8F0` borders rather than thick boundaries.
+- **Restrained Shadows:**
+  - *Standard Card:* `0 1px 3px 0 rgba(0, 180, 216, 0.04), 0 1px 2px 0 rgba(0, 180, 216, 0.02)`
+  - *Hover State:* Subtle displacement with `0 10px 25px -5px rgba(10, 22, 40, 0.08), 0 8px 10px -6px rgba(10, 22, 40, 0.04)`
+  - *Floating Booking Summary / Sticky Headers:* `0 -4px 16px 0 rgba(10, 22, 40, 0.06)` for bottom panels, accompanied by a clean `#E2E8F0` border.
+- **Overlay & Backdrop:** Modal sheets, search filters, and lightboxes deploy a deep slate scrim: `rgba(10, 22, 40, 0.6)` with a light `backdrop-filter: blur(4px)`.
+
+## Shapes
+
+The design system employs a **Soft (`1`)** shape language:
+- Standard UI interactive components (buttons, input fields, dropdown triggers, and select boxes) utilize `0.25rem` (4px) or `0.375rem` (6px) corner radiuses.
+- Content cards, destination image masks, and itinerary step containers utilize `rounded-lg` (`0.5rem` / 8px).
+- Modals, flyout filter sheets, and major hero card containers use `rounded-xl` (`0.75rem` / 12px).
+- Pill elements (`rounded-full`) are strictly preserved for status chips, duration badges, and category labels. Overly bulbous or rounded containers are prohibited to maintain a sharp, professional UK travel agency identity.
+
+## Components
+
+### 1. Buttons & Triggers
+- **Primary Action (CTA):** Warm Amber Gold (`#FFB703`) background with Dark Navy or Bright Ocean Cyan text, bold font weight, `rounded-md`, and smooth `background-color` transitions on hover. Used for "Book Now", "Pay Now", and search actions.
+- **Secondary Action:** Transparent background with a 1.5px solid Primary border and Primary text. Hovers into a light ocean wash.
+- **Destructive/Ghost:** Minimal padding, zero shadow, slate text transitioning to high-contrast red on hover.
+
+### 2. Holiday & Destination Cards
+- **Structure:** Crisp white background with a 1px `#E2E8F0` border and `0.5rem` radius.
+- **Visuals:** Top destination image pinned to a strict 16:10 or 4:3 aspect ratio with `object-cover`.
+- **Badges:** Overlaid tags positioned with `top: 12px; left: 12px` using semi-translucent dark slate or crisp white pills with dark text.
+- **Pricing Unit:** Displayed in bottom-right layout: small uppercase "From" muted text stacked above large bold price figures (`price-display`), aligned adjacent to the secondary or primary "View Details" trigger.
+
+### 3. Payment Scheme Selection Cards
+- **Interactive Radio Cards:** Grid of selectable tiles representing payment options (e.g., Full Payment vs. 1st Part Payment).
+- **Default State:** 1px solid `#E2E8F0`, white surface, radio indicator unoccupied.
+- **Selected State:** 2px solid `#FFB703`, background tinted appropriately, checked accent indicator, and clear dynamic breakdown of "Payable Today" vs "Remaining Balance".
+
+### 4. Form Controls & Inputs
+- **Inputs & Selects:** Height standard of 44px (touch-friendly), 1px solid `#CBD5E1`, internal horizontal padding of `space-md`, focus ring with 2px offset.
+- **Traveller Counter:** Stepper control unit with clear circular `+` and `-` buttons bounding a tabular counter figure. Minimum tap targets of 40x40px.
+
+### 5. Itinerary Timeline
+- Vertical progress trace in 2px `#E2E8F0`.
+- Day markers defined by 24px circles filled with Primary color containing white day indices, accompanied by expandable accordion panels describing daily city tours, inclusions, and transport.
+
+### 6. Badges & Chips
+- **Status Indicators:** Pills with light background tints and saturated text labels (`#EBF8EE` with `#1E7E34` for Confirmed, `#FEFCBF` with `#B7791F` for Pending).
+- All badges enforce uppercase tracking (`label-sm`).

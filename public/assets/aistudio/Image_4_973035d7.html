@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "status-warning-bg": "#FEFCBF",
+          "on-secondary-fixed": "#0f1c2c",
+          "surface-container-high": "#dee9ff",
+          "status-error": "#C53030",
+          "tertiary-container": "#473500",
+          "status-success": "#1E7E34",
+          "surface-card": "#FFFFFF",
+          "inverse-on-surface": "#ebf1ff",
+          "error-container": "#ffdad6",
+          "surface-dim": "#cfdaf1",
+          "outline": "#707978",
+          "on-secondary-fixed-variant": "#3a4859",
+          "on-error-container": "#93000a",
+          "secondary": "#525f71",
+          "surface-container-low": "#f0f3ff",
+          "tertiary": "#2d2000",
+          "surface-variant": "#d8e3f9",
+          "on-tertiary-container": "#c59b27",
+          "primary-fixed": "#beebe9",
+          "surface-canvas": "#FAFAFA",
+          "border-subtle": "#E2E8F0",
+          "surface-container": "#e7eeff",
+          "error": "#ba1a1a",
+          "inverse-surface": "#263142",
+          "on-tertiary-fixed": "#251a00",
+          "on-tertiary": "#ffffff",
+          "primary": "#002727",
+          "status-success-bg": "#EBF8EE",
+          "surface-container-highest": "#d8e3f9",
+          "inverse-primary": "#a2cfcd",
+          "secondary-fixed": "#d6e4f9",
+          "on-surface": "#111c2c",
+          "on-primary-fixed": "#00201f",
+          "primary-container": "#0f3e3d",
+          "on-background": "#111c2c",
+          "surface-bright": "#f9f9ff",
+          "surface-muted": "#F3F5F7",
+          "secondary-container": "#d3e1f6",
+          "accent-gold-hover": "#AC8419",
+          "on-primary-container": "#7da9a7",
+          "outline-variant": "#c0c8c7",
+          "background": "#f9f9ff",
+          "secondary-fixed-dim": "#bac8dc",
+          "border-strong": "#CBD5E1",
+          "status-error-bg": "#FFF5F5",
+          "on-surface-variant": "#404848",
+          "on-error": "#ffffff",
+          "surface-tint": "#3b6664",
+          "on-secondary-container": "#566475",
+          "primary-fixed-dim": "#a2cfcd",
+          "on-tertiary-fixed-variant": "#5a4300",
+          "surface-container-lowest": "#ffffff",
+          "tertiary-fixed": "#ffdf98",
+          "surface": "#f9f9ff",
+          "status-warning": "#B7791F",
+          "tertiary-fixed-dim": "#eec14b",
+          "on-primary": "#ffffff",
+          "accent-gold-subtle": "#FDF9EE",
+          "on-primary-fixed-variant": "#224d4c",
+          "on-secondary": "#ffffff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-3xl": "6rem",
+          "gutter": "1.5rem",
+          "gutter-mobile": "1rem",
+          "space-lg": "1.5rem",
+          "margin-mobile": "1.25rem",
+          "space-xl": "2.5rem",
+          "margin": "3rem",
+          "space-sm": "0.5rem",
+          "space-2xl": "4rem",
+          "space-md": "1rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "price-display": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Playfair Display"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "headline-lg": ["Playfair Display"],
+          "display": ["Playfair Display"],
+          "body-md": ["Plus Jakarta Sans"],
+          "headline-xl-mobile": ["Playfair Display"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"],
+          "headline-xl": ["Playfair Display"],
+          "display-mobile": ["Playfair Display"]
+        },
+        "fontSize": {
+          "price-display": ["28px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600"}],
+          "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+          "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700"}],
+          "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+          "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "display": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+          "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "headline-xl-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "headline-sm": ["18px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600"}],
+          "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+          "headline-md": ["22px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+          "display-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+        }
+      }
+    }
+  };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm" data-path="holidays" href="#"><img alt="JILIT Holidays Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X3FIs3tjapG5gkrx5XBiaSkO1qAJ-9ZgjGOxDmzWMfexN_j0k5S9EH0tLfLKIodbyWCAVPLv9KBx526rRk1derTa9wLm8vd8Jie9KL418IYcJnf-A9y-SyEzdWPdMBEXhWJ2q3IjmIekU264UtHeab5FLhQ20dkSTu0YzvtZdv3Si7JqLaApsDAUONlobebJd9kKI-Gg3RMEQ0dTotLbnN9XzzvMMvdsg5WqqTfKCtBbyQNhl8MoyEny0"/><span class="font-headline-sm text-headline-sm tracking-tight text-primary-container font-bold">JILIT Holidays</span></a></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary font-bold rounded-xl"><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="holidays" href="#">Holidays</a><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="airport-transfers" href="#">Airport Transfers</a><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="blog" href="#">Blog</a><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a><a class="px-space-md py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="my-account" href="#">My Account</a></nav><div class="flex items-center gap-space-md"><a class="hidden md:inline-flex items-center justify-center px-space-lg py-space-sm rounded-xl bg-on-tertiary-container hover:bg-accent-gold-hover text-on-tertiary font-label-lg text-label-lg shadow-[0_1px_3px_0_rgba(15,62,61,0.04)] transition-all" data-path="holidays" href="#">Explore Holidays</a><a class="flex items-center gap-space-xs" data-path="my-account" href="#"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></a></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<!-- Progress & Breadcrumb Sub-Header -->
+<section class="w-full bg-surface-container-low/70 py-space-md shadow-sm">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<!-- Nav Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-body-sm font-body-sm text-secondary">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Holidays</a>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Prague Christmas Tour</a>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<span class="text-on-surface font-semibold">Book Your Holiday</span>
+</nav>
+<!-- Secure Token Badge -->
+<div class="inline-flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-1 rounded-full shadow-sm text-label-sm font-label-sm text-primary">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">verified_user</span>
+<span>ATOL Protected #9822 &amp; ABTA Bonded</span>
+</div>
+</div>
+</section>
+<!-- Step Process Meter Bar -->
+<section class="w-full bg-surface-container-lowest shadow-sm">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 py-space-lg">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-space-md relative">
+<!-- Step 1: Active -->
+<div class="flex items-center gap-space-sm group">
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary font-label-lg flex items-center justify-center font-bold shadow-md">
+            1
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">Step 1 · Current</span>
+<span class="font-headline-sm text-[15px] font-bold text-on-surface truncate">Travellers &amp; Payment</span>
+</div>
+</div>
+<!-- Step 2: Upcoming -->
+<div class="flex items-center gap-space-sm opacity-60">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg flex items-center justify-center font-bold">
+            2
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Step 2</span>
+<span class="font-headline-sm text-[15px] font-medium text-on-surface truncate">Guest Details</span>
+</div>
+</div>
+<!-- Step 3: Upcoming -->
+<div class="hidden lg:flex items-center gap-space-sm opacity-60">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg flex items-center justify-center font-bold">
+            3
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Step 3</span>
+<span class="font-headline-sm text-[15px] font-medium text-on-surface truncate">Secure Settlement</span>
+</div>
+</div>
+<!-- Step 4: Upcoming -->
+<div class="hidden lg:flex items-center gap-space-sm opacity-60">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg flex items-center justify-center font-bold">
+            4
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Step 4</span>
+<span class="font-headline-sm text-[15px] font-medium text-on-surface truncate">Voucher Issued</span>
+</div>
+</div>
+</div>
+<!-- Subtle bar track -->
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-md overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 25%;"></div>
+</div>
+</div>
+</section>
+<!-- Main Booking Workspace -->
+<section class="w-full py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT COLUMN: Configurator Forms (8 Cols) -->
+<div class="lg:col-span-8 space-y-space-xl">
+<!-- Section Heading Header -->
+<div class="space-y-space-xs">
+<div class="inline-flex items-center gap-2 px-space-sm py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm tracking-wider uppercase font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              Step 1 of 3 · Booking Configuration
+            </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Customise Party &amp; Payment</h1>
+<p class="font-body-md text-body-md text-secondary">
+              Set your party headcount and select an upfront or 0% APR split payment schedule tailored to your schedule.
+            </p>
+</div>
+<!-- Part A: Package Summary Context Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm overflow-hidden flex flex-col sm:flex-row gap-space-lg items-stretch">
+<div class="sm:w-56 h-48 sm:h-auto rounded-lg overflow-hidden shrink-0 relative bg-surface-container">
+<img class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" data-alt="Prague Old Town Square at dusk during Christmas market with illuminated gothic Church of Our Lady before Tyn spires, snow on wooden chalet stalls, warm glowing lanterns, historic cobblestone streets in deep blue and gold atmospheric lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFw9C2pL474Ag6iwVvU4CKXtvgerEomTtCSCdhZuIz0knMcMwSxiBx3eNh9RJ1399iEUqvX8ytsPMO1kxUVKG-xdsNLpqh_11WD-2LABSocGJ6Y9HubiGNEAMYs9794PrBvXzxc0_dRm7T4NbvO2MAdzmUEtKn6Rclh1M5orlmzUqcS-7dX4dPGvxnA0lc2-ZJF3SzylsS0YzoKbq1CQl7ErmgykcGBpswQlWfm31shGp7tfSlMx9dLQ"/>
+<span class="absolute top-2 left-2 bg-on-secondary-fixed/90 backdrop-blur-md text-on-primary font-label-sm text-[10px] px-2 py-0.5 rounded tracking-wider uppercase">
+                4 Days / 3 Nights
+              </span>
+</div>
+<div class="flex flex-col justify-between py-1 grow space-y-space-sm">
+<div>
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<span class="text-tertiary-container font-label-sm text-label-sm uppercase tracking-wide font-bold">Festive Season 2025</span>
+<span class="text-outline-variant">•</span>
+<span class="text-secondary font-label-sm text-label-sm">Boutique Group (Max 16)</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-snug">Prague Christmas Tour</h2>
+<p class="font-body-sm text-body-sm text-secondary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+                  Prague, Czech Republic &amp; Bohemian Old Town
+                </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs bg-surface-container-low/60 p-space-sm rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_month</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-secondary uppercase">Tour Dates</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">05 Dec – 08 Dec 2025</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">hotel</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-secondary uppercase">Lodging</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Grand Hotel Bohemia (4★)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Part B: Section 10 - Traveller Selection -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-sm gap-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary/10 text-primary text-label-sm font-bold flex items-center justify-center">1</span>
+                  Select Travellers
+                </h3>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+                  Children must be accompanied by at least one adult. Age verified on departure day.
+                </p>
+</div>
+<span class="inline-flex items-center gap-1 text-primary text-label-sm font-label-sm font-semibold bg-surface-container px-space-sm py-1 rounded-full self-start sm:self-auto">
+<span class="material-symbols-outlined text-[16px]">group</span>
+                Group Capacity: 8 seats left
+              </span>
+</div>
+<div class="space-y-space-md">
+<!-- Stepper 1: Adults -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low/40 transition-colors shadow-sm gap-space-md">
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Adults</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded">Ages 12+</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Standard boutique hotel twin/double occupancy &amp; private touring.</p>
+<p class="font-price-display text-[17px] text-primary font-bold pt-1">£700 <span class="font-body-sm text-body-sm text-secondary font-normal">/ adult</span></p>
+</div>
+<div class="flex items-center gap-space-md self-end sm:self-center">
+<button aria-label="Decrease adult count" class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface flex items-center justify-center font-bold text-lg transition-all focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" onclick="adjustGuest('adults', -1)" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<span class="w-8 text-center font-price-display text-price-display text-on-surface" id="adult-count">2</span>
+<button aria-label="Increase adult count" class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface flex items-center justify-center font-bold text-lg transition-all focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" onclick="adjustGuest('adults', 1)" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<!-- Stepper 2: Children -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low/40 transition-colors shadow-sm gap-space-md">
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Children</span>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/30 px-2 py-0.5 rounded font-semibold">2–11 years</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Reduced tariff; includes Advent concert gift box &amp; bespoke treats.</p>
+<p class="font-price-display text-[17px] text-primary font-bold pt-1">£675 <span class="font-body-sm text-body-sm text-secondary font-normal">/ child</span></p>
+</div>
+<div class="flex items-center gap-space-md self-end sm:self-center">
+<button aria-label="Decrease child count" class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface flex items-center justify-center font-bold text-lg transition-all focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" onclick="adjustGuest('children', -1)" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<span class="w-8 text-center font-price-display text-price-display text-on-surface" id="child-count">1</span>
+<button aria-label="Increase child count" class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface flex items-center justify-center font-bold text-lg transition-all focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" onclick="adjustGuest('children', 1)" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<!-- Stepper 3: Infants -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low/40 transition-colors shadow-sm gap-space-md">
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Infants</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded">Under 2 years</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Travels complimentary on lap; travel cot reserved at hotel on request.</p>
+<p class="font-price-display text-[17px] text-status-success font-bold pt-1">Complimentary <span class="font-body-sm text-body-sm text-secondary font-normal">(£0)</span></p>
+</div>
+<div class="flex items-center gap-space-md self-end sm:self-center">
+<button aria-label="Decrease infant count" class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface flex items-center justify-center font-bold text-lg transition-all focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" onclick="adjustGuest('infants', -1)" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<span class="w-8 text-center font-price-display text-price-display text-on-surface" id="infant-count">0</span>
+<button aria-label="Increase infant count" class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface flex items-center justify-center font-bold text-lg transition-all focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" onclick="adjustGuest('infants', 1)" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Part C: Section 11 - Payment Scheme Selection -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-lg">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary/10 text-primary text-label-sm font-bold flex items-center justify-center">2</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Choose Payment Scheme</h3>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+                Select your settlement schedule. All schemes are 0% APR interest-free, protected under UK ATOL Bond #9822.
+              </p>
+</div>
+<!-- Radio Card Option 1: Full Payment -->
+<div class="relative rounded-xl p-space-lg transition-all cursor-pointer bg-primary/5 shadow-md ring-2 ring-primary" id="scheme-card-full" onclick="selectScheme('full')">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="pt-0.5">
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary" id="radio-full">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Option A: Full Payment Today</h4>
+<span class="bg-primary text-on-primary font-label-sm text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                        Most Convenient · Instant ATOL Voucher
+                      </span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+                      Settle your entire party balance now. Immediate definitive booking confirmation, zero remaining balance worries.
+                    </p>
+<!-- Breakdown chips -->
+<div class="flex flex-wrap items-center gap-space-md pt-2">
+<div class="flex items-center gap-1.5 text-body-sm text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Adult: <strong class="text-primary font-bold">£700</strong> / person</span>
+</div>
+<div class="flex items-center gap-1.5 text-body-sm text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Kids (2–11 yrs): <strong class="text-primary font-bold">£675</strong> / child</span>
+</div>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-[11px] text-secondary uppercase block">Payable Today</span>
+<span class="font-price-display text-price-display text-primary block" id="option-full-price">£2,075</span>
+<span class="font-label-sm text-[11px] text-status-success font-semibold">Balance due: £0</span>
+</div>
+</div>
+</div>
+<!-- Radio Card Option 2: Split Installments -->
+<div class="relative rounded-xl p-space-lg transition-all cursor-pointer bg-surface-container-low hover:bg-surface-container shadow-sm" id="scheme-card-split" onclick="selectScheme('split')">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="pt-0.5">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-transparent" id="radio-split">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Option B: 1st Part Payment (Deposit Today)</h4>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                        Flexible Split Scheme · 0% APR
+                      </span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+                      Lock in current early-winter room rates and boutique allocation with just a deposit. The rest is due closer to travel.
+                    </p>
+<!-- Breakdown chips -->
+<div class="flex flex-wrap items-center gap-space-md pt-2">
+<div class="flex items-center gap-1.5 text-body-sm text-on-surface">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span>Adult Deposit: <strong class="text-on-surface font-bold">£450</strong> / person</span>
+</div>
+<div class="flex items-center gap-1.5 text-body-sm text-on-surface">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span>Kids Deposit: <strong class="text-on-surface font-bold">£450</strong> / child</span>
+</div>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-[11px] text-secondary uppercase block">Payable Today</span>
+<span class="font-price-display text-price-display text-on-surface block" id="option-split-price">£1,350</span>
+<span class="font-label-sm text-[11px] text-secondary font-medium">Remainder: £725</span>
+</div>
+</div>
+<!-- Installment schedule indicator inside Option B -->
+<div class="mt-space-md pt-space-md hidden" id="split-details">
+<div class="bg-surface-container-lowest p-space-md rounded-lg space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface uppercase tracking-wider">Installment Timeline</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Automated balance reminder</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<span class="text-label-sm text-[11px] text-secondary block uppercase">1st Part Payment (Today)</span>
+<span class="text-headline-sm font-headline-sm font-bold text-primary">£1,350.00</span>
+<p class="text-body-sm text-secondary text-[12px] mt-0.5">Instant booking confirmation &amp; ATOL certificate.</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<span class="text-label-sm text-[11px] text-secondary block uppercase">2nd &amp; Final Payment (21 Oct 2025)</span>
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface">£725.00</span>
+<p class="text-body-sm text-secondary text-[12px] mt-0.5">Due 45 days before departure (£250/adult, £200/child).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Option 3 Explanatory Comparison Panel -->
+<div class="p-space-md rounded-xl bg-surface-container-low/70 space-y-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>Payment Protection Guarantee</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+                Whether settling in full or splitting across instalments, your funds are held in secure ring-fenced British trust accounts. 
+                Full invoices and ATOL confirmation vouchers are generated immediately upon initial transaction completion.
+              </p>
+</div>
+</div>
+<!-- Part D: Special Requests & Guest Notes -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">room_service</span>
+                Special Requests &amp; Dietary Requirements
+              </h3>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+                Twin bed configurations, Advent concert accessibility, festive banquet allergies, or celebration surprises.
+              </p>
+</div>
+<div>
+<label class="sr-only" for="booking-notes">Special requests</label>
+<textarea class="w-full rounded-xl bg-surface-container-low p-space-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none" id="booking-notes" placeholder="E.g., We require 1 double bed and 1 single rollaway bed. One guest is vegetarian for the Christmas Eve banquet." rows="3"></textarea>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-sm py-1 rounded-full bg-surface-container text-label-sm text-secondary hover:bg-surface-container-high transition-colors" onclick="appendTag('Twin Bed Preference')" type="button">
+                + Twin Beds
+              </button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container text-label-sm text-secondary hover:bg-surface-container-high transition-colors" onclick="appendTag('Vegetarian / Halal Meals')" type="button">
+                + Vegetarian / Halal
+              </button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container text-label-sm text-secondary hover:bg-surface-container-high transition-colors" onclick="appendTag('Airport Transfer Child Seat')" type="button">
+                + Booster / Child Car Seat
+              </button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container text-label-sm text-secondary hover:bg-surface-container-high transition-colors" onclick="appendTag('Anniversary / Birthday Surprise')" type="button">
+                + Special Occasion
+              </button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Sticky Booking Summary Panel (4 Cols) -->
+<div class="lg:col-span-4 lg:sticky lg:top-24 space-y-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md space-y-space-lg">
+<!-- Summary Header -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Investment Ledger</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Booking Summary</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-[26px]">receipt_long</span>
+</div>
+<!-- Schedule Dates Card -->
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-1">
+<span class="font-label-sm text-[11px] text-secondary uppercase font-semibold">Confirmed Tour Schedule</span>
+<p class="font-label-lg text-label-lg font-bold text-on-surface">Fri 05 Dec – Mon 08 Dec 2025</p>
+<p class="font-body-sm text-body-sm text-secondary">4 Days / 3 Nights · Grand Hotel Bohemia</p>
+</div>
+<!-- Party Breakdown List -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface flex items-center gap-1.5">
+<span class="font-bold" id="summary-adult-count">2</span> Adults
+                  <span class="text-secondary text-[12px]">(£700 each)</span>
+</span>
+<span class="font-semibold text-on-surface font-price-display" id="summary-adult-total">£1,400.00</span>
+</div>
+<div class="flex items-center justify-between text-body-sm" id="summary-child-row">
+<span class="text-on-surface flex items-center gap-1.5">
+<span class="font-bold" id="summary-child-count">1</span> Child (2–11 yrs)
+                  <span class="text-secondary text-[12px]">(£675 each)</span>
+</span>
+<span class="font-semibold text-on-surface font-price-display" id="summary-child-total">£675.00</span>
+</div>
+<div class="flex items-center justify-between text-body-sm hidden" id="summary-infant-row">
+<span class="text-on-surface flex items-center gap-1.5">
+<span class="font-bold" id="summary-infant-count">0</span> Infants (&lt;2 yrs)
+                </span>
+<span class="font-semibold text-status-success font-price-display">£0.00</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-secondary">Taxes, Surcharges &amp; ATOL Levy</span>
+<span class="font-semibold text-status-success">Included (£0.00)</span>
+</div>
+</div>
+<!-- Inclusions Checklist Box -->
+<div class="bg-surface-container-low/60 p-space-md rounded-lg space-y-space-xs">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-secondary font-bold block mb-1">
+                Guaranteed Package Inclusions:
+              </span>
+<div class="flex items-start gap-2 text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-status-success shrink-0 mt-0.5">check_circle</span>
+<span>4★ Grand Hotel Bohemia (3 Nights accommodation)</span>
+</div>
+<div class="flex items-start gap-2 text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-status-success shrink-0 mt-0.5">check_circle</span>
+<span>Executive Mercedes Airport Transfers (Václav Havel)</span>
+</div>
+<div class="flex items-start gap-2 text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-status-success shrink-0 mt-0.5">check_circle</span>
+<span>Advent Classical Concert in Mirror Chapel</span>
+</div>
+<div class="flex items-start gap-2 text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-status-success shrink-0 mt-0.5">check_circle</span>
+<span>Daily Champagne Breakfast &amp; Old Town Tour</span>
+</div>
+</div>
+<!-- Calculation Totals Block -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between text-body-md text-secondary">
+<span>Total Holiday Investment</span>
+<span class="font-price-display text-[18px] font-bold text-on-surface" id="summary-grand-total">£2,075.00</span>
+</div>
+<!-- High-Contrast Due Today Container -->
+<div class="p-space-md rounded-xl bg-primary text-on-primary space-y-1 mt-2 shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[11px] tracking-wider uppercase opacity-90" id="summary-due-label">Payable Today (Option A)</span>
+<span class="material-symbols-outlined text-[18px] opacity-90">lock</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-price-display text-price-display font-bold" id="summary-due-amount">£2,075.00</span>
+<span class="font-label-sm text-[11px] text-status-warning-bg opacity-90" id="summary-balance-due">Remaining: £0.00</span>
+</div>
+</div>
+<!-- Alternative Hint Note -->
+<p class="font-label-sm text-[12px] text-secondary text-center pt-1" id="scheme-alternative-hint">
+                Prefer to split? Select <span class="font-semibold text-primary">Option B</span> to pay only <span class="font-bold text-on-surface">£1,350.00</span> today.
+              </p>
+</div>
+<!-- CTA Execution Trigger -->
+<div class="space-y-space-xs pt-space-xs">
+<a class="w-full flex items-center justify-center gap-space-sm bg-tertiary-container hover:bg-tertiary-fixed-dim text-on-tertiary font-label-lg text-label-lg py-space-md px-space-lg rounded-xl shadow-md hover:shadow-lg transition-all text-center font-bold" href="#">
+<span>Continue to Guest Details</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<p class="text-center font-body-sm text-[12px] text-secondary">
+                No payment taken at this stage · Free cancellation within 48h
+              </p>
+</div>
+<!-- Trust Guarantees -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-center gap-space-md text-secondary text-[12px]">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">encrypted</span>
+<span>256-Bit Encrypted</span>
+</div>
+<span>•</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">support_agent</span>
+<span>24/7 UK Concierge</span>
+</div>
+</div>
+</div>
+<!-- Direct Concierge Help Widget -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">phone_in_talk</span>
+</div>
+<div>
+<span class="font-label-sm text-[11px] text-secondary uppercase font-semibold block">Need telephone assistance?</span>
+<a class="font-label-lg text-label-lg font-bold text-on-surface hover:text-primary transition-colors" href="tel:08004567890">
+                0800 456 7890
+              </a>
+<span class="text-[12px] text-secondary block">Freephone · UK Specialist Team</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive State Engine -->
+<script>
+    (function() {
+      // Data State
+      const state = {
+        adults: 2,
+        children: 1,
+        infants: 0,
+        selectedScheme: 'full', // 'full' or 'split'
+        prices: {
+          adultFull: 700,
+          adultSplitDeposit: 450,
+          adultSplitFinal: 250,
+          childFull: 675,
+          childSplitDeposit: 450,
+          childSplitFinal: 225,
+          infant: 0
+        }
+      };
+
+      window.adjustGuest = function(type, delta) {
+        if (type === 'adults') {
+          const next = state.adults + delta;
+          if (next >= 1 && next <= 12) {
+            state.adults = next;
+          }
+        } else if (type === 'children') {
+          const next = state.children + delta;
+          if (next >= 0 && next <= 8) {
+            state.children = next;
+          }
+        } else if (type === 'infants') {
+          const next = state.infants + delta;
+          if (next >= 0 && next <= 4) {
+            state.infants = next;
+          }
+        }
+        renderState();
+      };
+
+      window.selectScheme = function(scheme) {
+        state.selectedScheme = scheme;
+        renderState();
+      };
+
+      window.appendTag = function(text) {
+        const textarea = document.getElementById('booking-notes');
+        if (textarea) {
+          const val = textarea.value.trim();
+          textarea.value = val ? val + '\\n• ' + text : '• ' + text;
+          textarea.focus();
+        }
+      };
+
+      function renderState() {
+        // Update Stepper counters
+        document.getElementById('adult-count').textContent = state.adults;
+        document.getElementById('child-count').textContent = state.children;
+        document.getElementById('infant-count').textContent = state.infants;
+
+        // Calculations
+        const adultFullTotal = state.adults * state.prices.adultFull;
+        const childFullTotal = state.children * state.prices.childFull;
+        const grandTotal = adultFullTotal + childFullTotal;
+
+        const adultDepositTotal = state.adults * state.prices.adultSplitDeposit;
+        const childDepositTotal = state.children * state.prices.childSplitDeposit;
+        const totalDeposit = adultDepositTotal + childDepositTotal;
+        const totalBalance = grandTotal - totalDeposit;
+
+        // Dynamic Card Price Outputs
+        document.getElementById('option-full-price').textContent = '£' + grandTotal.toLocaleString();
+        document.getElementById('option-split-price').textContent = '£' + totalDeposit.toLocaleString();
+
+        // Right summary party counts & prices
+        document.getElementById('summary-adult-count').textContent = state.adults;
+        document.getElementById('summary-adult-total').textContent = '£' + adultFullTotal.toLocaleString() + '.00';
+
+        const childRow = document.getElementById('summary-child-row');
+        if (state.children > 0) {
+          childRow.classList.remove('hidden');
+          document.getElementById('summary-child-count').textContent = state.children;
+          document.getElementById('summary-child-total').textContent = '£' + childFullTotal.toLocaleString() + '.00';
+        } else {
+          childRow.classList.add('hidden');
+        }
+
+        const infantRow = document.getElementById('summary-infant-row');
+        if (state.infants > 0) {
+          infantRow.classList.remove('hidden');
+          document.getElementById('summary-infant-count').textContent = state.infants;
+        } else {
+          infantRow.classList.add('hidden');
+        }
+
+        document.getElementById('summary-grand-total').textContent = '£' + grandTotal.toLocaleString() + '.00';
+
+        // Payment Scheme Selection styling
+        const cardFull = document.getElementById('scheme-card-full');
+        const cardSplit = document.getElementById('scheme-card-split');
+        const radioFull = document.getElementById('radio-full');
+        const radioSplit = document.getElementById('radio-split');
+        const splitDetails = document.getElementById('split-details');
+
+        const dueLabel = document.getElementById('summary-due-label');
+        const dueAmount = document.getElementById('summary-due-amount');
+        const balanceDue = document.getElementById('summary-balance-due');
+        const schemeHint = document.getElementById('scheme-alternative-hint');
+
+        if (state.selectedScheme === 'full') {
+          // Card 1 active
+          cardFull.className = 'relative rounded-xl p-space-lg transition-all cursor-pointer bg-primary/5 shadow-md ring-2 ring-primary';
+          radioFull.className = 'w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary';
+          
+          // Card 2 inactive
+          cardSplit.className = 'relative rounded-xl p-space-lg transition-all cursor-pointer bg-surface-container-low hover:bg-surface-container shadow-sm';
+          radioSplit.className = 'w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-transparent';
+          splitDetails.classList.add('hidden');
+
+          // Summary box
+          dueLabel.textContent = 'Payable Today (Option A Selected)';
+          dueAmount.textContent = '£' + grandTotal.toLocaleString() + '.00';
+          balanceDue.textContent = 'Remaining Balance: £0.00';
+          schemeHint.innerHTML = 'Prefer to split? Select <span class="font-semibold text-primary cursor-pointer" onclick="selectScheme(\\'split\\')">Option B</span> to pay only <span class="font-bold text-on-surface">£' + totalDeposit.toLocaleString() + '.00</span> today.';
+        } else {
+          // Card 2 active
+          cardSplit.className = 'relative rounded-xl p-space-lg transition-all cursor-pointer bg-primary/5 shadow-md ring-2 ring-primary';
+          radioSplit.className = 'w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary';
+          splitDetails.classList.remove('hidden');
+
+          // Card 1 inactive
+          cardFull.className = 'relative rounded-xl p-space-lg transition-all cursor-pointer bg-surface-container-low hover:bg-surface-container shadow-sm';
+          radioFull.className = 'w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-transparent';
+
+          // Summary box
+          dueLabel.textContent = 'Payable Today (1st Part Payment)';
+          dueAmount.textContent = '£' + totalDeposit.toLocaleString() + '.00';
+          balanceDue.textContent = 'Remaining: £' + totalBalance.toLocaleString() + '.00 due 21 Oct';
+          schemeHint.innerHTML = 'Opt for full settlement? Select <span class="font-semibold text-primary cursor-pointer" onclick="selectScheme(\\'full\\')">Option A</span> to clear the balance (£' + grandTotal.toLocaleString() + '.00).';
+        }
+      }
+
+      // Initialize defaults
+      renderState();
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-low pt-space-2xl pb-space-xl shadow-[0_-4px_16px_0_rgba(13,27,42,0.03)]"><div class="max-w-7xl mx-auto px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl pb-space-2xl"><div class="lg:col-span-2 space-y-space-md"><div class="flex items-center gap-space-sm"><img alt="JILIT Holidays Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X3FIs3tjapG5gkrx5XBiaSkO1qAJ-9ZgjGOxDmzWMfexN_j0k5S9EH0tLfLKIodbyWCAVPLv9KBx526rRk1derTa9wLm8vd8Jie9KL418IYcJnf-A9y-SyEzdWPdMBEXhWJ2q3IjmIekU264UtHeab5FLhQ20dkSTu0YzvtZdv3Si7JqLaApsDAUONlobebJd9kKI-Gg3RMEQ0dTotLbnN9XzzvMMvdsg5WqqTfKCtBbyQNhl8MoyEny0"/><span class="font-headline-sm text-headline-sm tracking-tight text-primary-container font-bold">JILIT Holidays</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Curated premium holiday escapes, hand-crafted European journeys, and punctual executive UK airport transfers. Engineered with modern reliability and British touring distinction.</p><div class="flex flex-wrap items-center gap-space-sm pt-space-xs"><span class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-card text-on-surface font-label-sm text-label-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[16px] text-on-tertiary-container">verified_user</span>ATOL Protected</span><span class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-card text-on-surface font-label-sm text-label-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[16px] text-on-tertiary-container">shield</span>ABTA Bonded</span><span class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-card text-on-surface font-label-sm text-label-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[16px] text-status-success">lock</span>Secure Booking</span></div></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary-container uppercase tracking-wider font-bold">Discover</h3><ul class="space-y-space-xs"><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="holidays" href="#">Holidays &amp; Tours</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="airport-transfers" href="#">Airport Transfers</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="blog" href="#">Travel Journal &amp; Blog</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a></li></ul></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary-container uppercase tracking-wider font-bold">Client Care</h3><ul class="space-y-space-xs"><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-account" href="#">My Account</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-bookings" href="#">My Bookings</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a></li><li class="py-0.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-conditions" href="#">Terms &amp; Conditions</a></li></ul></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary-container uppercase tracking-wider font-bold">UK Concierge</h3><div class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary-container mt-0.5">call</span><div><span class="block font-semibold text-on-surface">0800 456 7890</span><span class="text-[12px]">Mon–Sat, 8am–7pm GMT</span></div></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary-container mt-0.5">mail</span><a class="hover:text-on-surface transition-colors" href="mailto:support@jilitholidays.co.uk">support@jilitholidays.co.uk</a></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary-container mt-0.5">location_on</span><span class="">120 Pall Mall, St. James's, London SW1Y 5ED, United Kingdom</span></div></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-container-high/30 rounded-xl p-space-md"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 JILIT Holidays Ltd. Registered in England &amp; Wales. All rights reserved.</p><div class="flex items-center gap-space-lg font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-conditions" href="#">Terms &amp; Conditions</a><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">ABTA Y6841 / ATOL 9822</span></div></div></div></footer>
+</body></html>
